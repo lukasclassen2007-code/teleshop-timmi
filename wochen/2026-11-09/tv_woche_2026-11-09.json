@@ -1,0 +1,14 @@
+[
+  {"type": "scene", "theme": "intro", "pose": "01_winken", "layout": "center",
+   "kicker": "HALLO TIMMENDORF!", "headline": "Moin, ich bin Timmi!", "sub": "Die Shop-Katze vom Teleshop"},
+  {"type": "scene", "theme": "warn", "pose": "02_handy_sms", "layout": "close",
+   "kicker": "BETRUGS-ALARM", "headline": "Fake-Paket-SMS?", "sub": "Nie auf den Link tippen!"},
+  {"type": "funfact", "pose": "03_idee", "big": "1992", "text": "Die erste SMS der Welt lautete „Merry Christmas“."},
+  {"type": "scene", "theme": "signal", "pose": "09_empfang", "layout": "center",
+   "kicker": "TIMMIS TIPP", "headline": "Funkloch zu Hause?", "sub": "WLAN-Call macht’s möglich"},
+  {"type": "scene", "theme": "cold", "pose": "14_herbst", "layout": "center",
+   "kicker": "HERBST-TIPP", "headline": "Kälte frisst Akku", "sub": "Handy in die Innentasche"},
+  {"type": "funfact", "pose": "03_idee", "big": "1973", "text": "So alt ist das erste Handy. Es wog rund 1 kg!"},
+  {"type": "scene", "theme": "cta", "pose": "04_zeigen", "layout": "left",
+   "kicker": "KOSTENFREI & UNVERBINDLICH", "headline": "Dein Tarif-Check", "sub": "Komm rein – wir beraten dich!"}
+]
