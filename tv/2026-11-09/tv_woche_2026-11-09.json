@@ -1,0 +1,14 @@
+[
+  {"type": "scene", "theme": "intro", "pose": "01_winken", "layout": "center", "dur": 5,
+   "kicker": "WILLKOMMEN!", "headline": "Moin, ich bin Timmi!", "sub": "Schön, dass du da bist"},
+  {"type": "funfact", "pose": "03_idee", "dur": 6, "big": "Blauzahn",
+   "text": "Bluetooth ist nach dem Wikingerkönig Harald „Blauzahn“ benannt."},
+  {"type": "insta", "pose": "04_zeigen", "dur": 8,
+   "kicker": "FOLGE TIMMI", "headline": "Timmi auf Instagram", "sub": "Tipps, Fun-Facts & Aktionen"},
+  {"type": "scene", "theme": "warn", "pose": "02_handy_sms", "layout": "close", "dur": 5,
+   "kicker": "BETRUGS-ALARM", "headline": "Fake-Paket-SMS?", "sub": "Nie auf den Link tippen!"},
+  {"type": "funfact", "pose": "03_idee", "dur": 6, "big": "95 %", "glow": [110, 170, 255],
+   "text": "des Internets zwischen Kontinenten läuft durch Seekabel – auch durch die Ostsee."},
+  {"type": "google", "pose": "18_danke", "dur": 8,
+   "kicker": "DANKE!", "headline": "Zufrieden mit uns?", "sub": "Timmi freut sich über deine Bewertung"}
+]
