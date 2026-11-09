@@ -37,7 +37,7 @@ def post_iphone():
     img = gradient(W, H, (40, 36, 52), (14, 14, 16)).convert("RGBA")
     glow(img, W // 2, 900, 460, AMBER, 0.55)
     sparkles(img, [(150, 560, 26), (930, 520, 20), (880, 860, 30), (190, 980, 18)])
-    c = cat("02_handy_neu", 860, 800)
+    c = cat("02_handy_neu", 860, 780)
     cx, by = W // 2, H - FOOT - 20
     shadow(img, cx, by, c.width * 0.7)
     img.alpha_composite(c, (cx - c.width // 2, by - c.height))
@@ -45,8 +45,10 @@ def post_iphone():
     img.alpha_composite(logo(54), (48, 40))
     pill(d, 48, 118, "NEU IM SHOP")
     d.text((46, 176), "Endlich da:", font=font("Bold", 76), fill=WHITE)
-    d.text((46, 262), "iPhone 18 Pro", font=font("Bold", 76), fill=AMBER)
-    d.text((48, 360), "Jetzt bei uns ansehen & ausprobieren", font=font("Medium", 34), fill=(215, 215, 215))
+    d.text((46, 262), "das neue iPhone 18", font=font("Bold", 76), fill=AMBER)
+    x = 48
+    for t in ("iPhone 18", "18 Pro", "18 Pro Max"):
+        x += pill(d, x, 368, t, 26, fill=(255, 255, 255), col=INK) + 14
     rp.draw_hint(d)
     rp.footer(d)
     return img.convert("RGB")
@@ -166,7 +168,7 @@ def story_3():
 
 
 if __name__ == "__main__":
-    post_iphone().save(f"{OUT}/post_1_iphone18pro.jpg", quality=92)
+    post_iphone().save(f"{OUT}/post_1_iphone18.jpg", quality=92)
     post_blackweek().save(f"{OUT}/post_2_blackweek.jpg", quality=92)
     post_funfact().save(f"{OUT}/post_3_funfact.jpg", quality=92)
     story_1().save(f"{OUT}/story_1_psst.jpg", quality=92)
