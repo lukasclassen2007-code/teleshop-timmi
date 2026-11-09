@@ -189,7 +189,7 @@ def story2(t):
     # Aufforderung unten, sanft pulsierend
     a = ease((t - 3.0) / 0.5)
     pulse = 1 + 0.04 * math.sin(t * 5)
-    layer(img, a, lambda dd: pill(dd, W / 2, 1545, "Jetzt im Shop testen", round(40 * pulse)))
+    layer(img, a, lambda dd: pill(dd, W / 2, 1545, "Jetzt bei uns erhältlich", round(40 * pulse)))
     return img
 
 

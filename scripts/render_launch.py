@@ -144,7 +144,7 @@ def story_2():
     pill(d, SW / 2, 340, "STORY 2 / 3", 30, center=True)
     d.text((SW / 2, 430), "Endlich da!", font=font("Bold", 110), fill=WHITE, anchor="mt")
     d.text((SW / 2, 560), "iPhone 18 Pro", font=font("Bold", 92), fill=AMBER, anchor="mt")
-    story_footer(d, "Jetzt im Shop ansehen & testen")
+    story_footer(d, "Jetzt bei uns erhältlich")
     return img.convert("RGB")
 
 
