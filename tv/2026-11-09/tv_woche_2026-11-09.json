@@ -1,8 +1,8 @@
 [
   {"type": "scene", "theme": "intro", "pose": "01_winken", "layout": "center", "dur": 5,
    "kicker": "WILLKOMMEN!", "headline": "Moin, ich bin Timmi!", "sub": "Schön, dass du da bist"},
-  {"type": "funfact", "pose": "03_idee", "dur": 6, "big": "Blauzahn",
-   "text": "Bluetooth ist nach dem Wikingerkönig Harald „Blauzahn“ benannt."},
+  {"type": "funfact", "pose": "03_idee", "dur": 6, "big": "Bluetooth",
+   "text": "ist nach dem Wikingerkönig Harald „Blauzahn“ benannt."},
   {"type": "insta", "pose": "04_zeigen", "dur": 8,
    "kicker": "FOLGE TIMMI", "headline": "Timmi auf Instagram", "sub": "Tipps, Fun-Facts & Aktionen"},
   {"type": "scene", "theme": "warn", "pose": "02_handy_sms", "layout": "close", "dur": 5,
