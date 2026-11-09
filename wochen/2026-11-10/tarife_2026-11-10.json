@@ -1,0 +1,111 @@
+{
+  "aktion": "Black-Week-Aktion 10.11.–15.12.2026",
+  "gruppen": [
+    {
+      "id": "wenig",
+      "kicker": "WENIGSURFER",
+      "pose": "12_chillen",
+      "bg": [
+        [
+          226,
+          240,
+          255
+        ],
+        [
+          150,
+          196,
+          255
+        ]
+      ],
+      "typ": "Wenig surfen, viel chillen",
+      "marke": "otelo",
+      "tarif": "Allnet-Flat Go",
+      "daten": "15 GB",
+      "daten_alt": null,
+      "preis": "14,99 €",
+      "preis_fest": null,
+      "extras": [
+        "Allnet-Flat",
+        "bis zu 50 € Wechselbonus"
+      ],
+      "fuss": "otelo Allnet-Flat Go: 14,99 €/Monat, 24 Monate Mindestlaufzeit, Anschlusspreis 0 €. Bis zu 50 € Bonus bei Rufnummernmitnahme. Alle Bedingungen im Shop."
+    },
+    {
+      "id": "gelegenheit",
+      "kicker": "GELEGENHEITSSURFER",
+      "pose": "02_handy",
+      "bg": [
+        [
+          255,
+          238,
+          210
+        ],
+        [
+          255,
+          178,
+          90
+        ]
+      ],
+      "typ": "Social Media & Streaming ab und zu",
+      "marke": "otelo",
+      "tarif": "Allnet-Flat Classic",
+      "daten": "150 GB",
+      "daten_alt": "statt 50 GB",
+      "preis": "19,99 €",
+      "preis_fest": null,
+      "extras": [
+        "3× Datenvolumen",
+        "bis zu 50 € Wechselbonus"
+      ],
+      "fuss": "otelo Allnet-Flat Classic: 19,99 €/Monat, 24 Monate Mindestlaufzeit, Anschlusspreis 0 €. 150 GB statt 50 GB bei Abschluss im Aktionszeitraum 10.11.–15.12.2026. Bis zu 50 € Bonus bei Rufnummernmitnahme. Alle Bedingungen im Shop."
+    },
+    {
+      "id": "viel",
+      "kicker": "VIELSURFER",
+      "pose": "08_speed",
+      "bg": [
+        [
+          255,
+          226,
+          226
+        ],
+        [
+          235,
+          90,
+          90
+        ]
+      ],
+      "typ": "Streamen, zocken, Hotspot – ohne Limit",
+      "marke": "Vodafone",
+      "tarif": "Smart Lite",
+      "daten": "Unlimited",
+      "daten_alt": "im 5G-Netz",
+      "preis": "34,99 €",
+      "preis_fest": "29,99 €",
+      "extras": [
+        "Unbegrenztes Datenvolumen",
+        "Vodafone 5G-Netz"
+      ],
+      "fuss": "Vodafone Smart Lite: 34,99 €/Monat für Neukunden, für Vodafone-Festnetzkunden 29,99 €/Monat (5 € Rabatt). 24 Monate Mindestlaufzeit, Anschlusspreis 0 €. Unbegrenztes Datenvolumen bei Abschluss im Aktionszeitraum 10.11.–15.12.2026. Nicht für Young-Tarife. Alle Bedingungen im Shop."
+    }
+  ],
+  "familie": {
+    "pose": "16_geschenk",
+    "kicker": "FAMILIENSPEZIAL",
+    "headline": "Unterm Baum:",
+    "headline2": "2× Unlimited",
+    "sub": "für die ganze Familie",
+    "preis": "44,94 €",
+    "preis_info": "für 2 Karten zusammen",
+    "hinweis": "für Vodafone-Festnetzkunden (sonst 49,94 €)",
+    "extras": [
+      "Vodafone 5G-Netz",
+      "Smart Lite + FamilyCard XL"
+    ],
+    "fuss": "Vodafone Smart Lite + FamilyCard XL: zusammen 49,94 €/Monat für Neukunden, für Vodafone-Festnetzkunden 44,94 €/Monat. 24 Monate Mindestlaufzeit, Anschlusspreis 0 €. Unbegrenztes Datenvolumen bei Abschluss im Aktionszeitraum 10.11.–15.12.2026. Nicht für Young-Tarife. Alle Bedingungen im Shop."
+  },
+  "funfact": {
+    "big": "19 Sek.",
+    "text": "So lang ist das allererste YouTube-Video „Me at the zoo“ – hochgeladen am 23. April 2005."
+  }
+}
