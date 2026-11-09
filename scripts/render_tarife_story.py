@@ -24,8 +24,8 @@ def note(img, text=NOTE, dark=True):
 # ---------- Story 1: Welcher Surfer-Typ bist du? ----------
 def make_story1(data):
     bg = gradient(W, H, (40, 36, 52), (12, 12, 14)).convert("RGBA")
-    c = cat("03_idee", 560, 560)
-    rows = [(g["kicker"].title(), f'{g["daten"]} · ab {g["preis_fest"] or g["preis"]}*') for g in data["gruppen"]]
+    c = cat("03_idee", 520, 470)
+    rows = [(g["kicker"].title(), g["kurz"]) for g in data["gruppen"]] + [("Familie", "2× Unlimited")]
 
     def frame(t):
         img = bg.copy()
@@ -42,16 +42,15 @@ def make_story1(data):
             if p <= 0:
                 continue
             x = 140 + round((1 - p) * 1000)
-            y = 690 + i * 120
+            y = 680 + i * 112
 
             def card(dd, x=x, y=y, k=k, v=v):
-                dd.rounded_rectangle((x, y, x + 800, y + 100), radius=30, fill=WHITE)
-                dd.text((x + 36, y + 50), k, font=font("Bold", 38), fill=INK, anchor="lm")
-                dd.text((x + 770, y + 50), v, font=font("Medium", 30), fill=(90, 90, 90), anchor="rm")
+                dd.rounded_rectangle((x, y, x + 800, y + 96), radius=30, fill=WHITE)
+                dd.text((x + 36, y + 48), k, font=font("Bold", 38), fill=INK, anchor="lm")
+                dd.text((x + 770, y + 48), v, font=font("Bold", 32), fill=(200, 110, 0), anchor="rm")
             layer(img, 1.0, card)
         a = ease((t - 3.4) / 0.5) * (0.7 + 0.3 * math.sin(t * 5) ** 2)
-        layer(img, a, lambda dd: dd.text((W / 2, 1660), "Finde deinen Tarif bei uns!", font=font("Bold", 40), fill=AMBER, anchor="ms"))
-        note(img, NOTE + " Vielsurfer: Vodafone Smart Lite, 29,99 € für Vodafone-Festnetzkunden, sonst 34,99 €.")
+        layer(img, a, lambda dd: pill(dd, W / 2, 1600, "Timmi findet deinen Tarif – im Shop!", 36))
         return img
     return frame
 
@@ -61,7 +60,7 @@ def make_story2(data):
     g = data["gruppen"][1]
     bg = gradient(W, H, (255, 236, 205), (255, 160, 60)).convert("RGBA")
     rays = rs.rays_image((255, 255, 255, 50))
-    c = cat("08_speed", 760, 600)
+    c = cat("08_speed", 740, 520)
 
     def frame(t):
         img = bg.copy()
@@ -88,9 +87,11 @@ def make_story2(data):
         a = ease((t - 2.9) / 0.5)
 
         def price(dd):
-            pill(dd, W / 2, 935, f'{g["marke"]} {g["tarif"]} · {g["preis"]}*/Monat', 36, fill=INK, col=AMBER)
+            pill(dd, W / 2, 935, "Zum gleichen Preis wie sonst!", 36, fill=INK, col=AMBER)
         layer(img, a, price)
-        note(img, dark=False)
+        a = ease((t - 3.4) / 0.5)
+        pulse = 1 + 0.035 * math.sin(t * 5)
+        layer(img, a, lambda dd: pill(dd, W / 2, 1610, "Komm vorbei – Timmi zeigt's dir!", round(36 * pulse)))
         return img
     return frame
 
@@ -99,7 +100,7 @@ def make_story2(data):
 def make_story3(data):
     f = data["familie"]
     bg = gradient(W, H, (150, 20, 30), (55, 6, 12)).convert("RGBA")
-    c = cat(f["pose"], 560, 480)
+    c = cat(f["pose"], 560, 560)
     random.seed(11)
     flakes = [(random.uniform(0, W), random.uniform(-H, H), random.uniform(3, 10), random.uniform(60, 160), random.uniform(0, 6.28)) for _ in range(90)]
 
@@ -116,27 +117,22 @@ def make_story3(data):
         rs.put_cat(img, c, W // 2, 1580, 0.6, t, "pop")
         head(img, "STORY 3 / 3")
         a = ease((t - 0.2) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 430), f["headline"], font=font("Bold", 72), fill=WHITE, anchor="mt"))
-        p = back((t - 0.6) / 0.6)
-        if p > 0:
-            sz = max(10, round(140 * p))
-            ImageDraw.Draw(img).text((W / 2, 520), f["headline2"], font=font("Bold", sz), fill=AMBER, anchor="mt")
-        a = ease((t - 1.3) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 690), f["sub"], font=font("Medium", 48), fill=WHITE, anchor="mt"))
+        layer(img, a, lambda dd: dd.text((W / 2, 430), "Unbegrenzt surfen", font=font("Bold", 84), fill=WHITE, anchor="mt"))
+        a2 = ease((t - 0.6) / 0.5)
+        layer(img, a2, lambda dd: dd.text((W / 2, 540), "für dich & deine Liebsten?", font=fit(dd, "für dich & deine Liebsten?", "Bold", 70, W - 80, 40), fill=AMBER, anchor="mt"))
         a = ease((t - 1.9) / 0.5)
 
         def card(dd):
-            x0, y0 = W / 2 - 330, 790 + round(30 * (1 - a))
-            dd.rounded_rectangle((x0, y0, x0 + 660, y0 + 300), radius=36, fill=WHITE)
-            dd.text((W / 2, y0 + 40), "Vodafone · 2 Karten · Unlimited", font=font("Bold", 34), fill=RED, anchor="mt")
-            dd.text((W / 2, y0 + 92), "nur " + f["preis"] + "*", font=font("Bold", 84), fill=INK, anchor="mt")
-            dd.text((W / 2, y0 + 205), f["preis_info"] + ",", font=font("Medium", 26), fill=(90, 90, 90), anchor="mt")
-            dd.text((W / 2, y0 + 243), f["hinweis"], font=fit(dd, f["hinweis"], "Medium", 26, 600, 18), fill=(90, 90, 90), anchor="mt")
+            x0, y0 = W / 2 - 330, 670 + round(30 * (1 - a))
+            dd.rounded_rectangle((x0, y0, x0 + 660, y0 + 250), radius=36, fill=WHITE)
+            dd.text((W / 2, y0 + 36), "Vodafone 5G-Netz", font=font("Bold", 34), fill=RED, anchor="mt")
+            dd.text((W / 2, y0 + 84), "2× Unlimited", font=font("Bold", 92), fill=INK, anchor="mt")
         layer(img, a, card)
         a = ease((t - 3.2) / 0.5)
         pulse = 1 + 0.035 * math.sin(t * 5)
-        layer(img, a, lambda dd: pill(dd, W / 2, 1600, "Komm vorbei – Poststraße 34", round(36 * pulse)))
-        note(img, "*Smart Lite + FamilyCard XL. " + NOTE[1:])
+        layer(img, a, lambda dd: pill(dd, W / 2, 1600, "Den Preis flüstert dir Timmi im Shop!", round(34 * pulse)))
+        a = ease((t - 3.6) / 0.5)
+        layer(img, a, lambda dd: dd.text((W / 2, 1700), "Poststraße 34 · Mo–Fr 9–17 Uhr", font=font("Bold", 36), fill=WHITE, anchor="mt"))
         return img
     return frame
 
