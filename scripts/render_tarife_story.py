@@ -131,7 +131,7 @@ def make_story3(data):
         layer(img, a, card)
         a = ease((t - 3.2) / 0.5)
         pulse = 1 + 0.035 * math.sin(t * 5)
-        layer(img, a, lambda dd: pill(dd, W / 2, 1600, "Den Preis flüstert dir Timmi im Shop!", round(34 * pulse)))
+        layer(img, a, lambda dd: pill(dd, W / 2, 1600, "Weitere Infos bei uns im Shop!", round(36 * pulse)))
         a = ease((t - 3.6) / 0.5)
         layer(img, a, lambda dd: dd.text((W / 2, 1700), "Poststraße 34 · Mo–Fr 9–17 Uhr", font=font("Bold", 36), fill=WHITE, anchor="mt"))
         return img

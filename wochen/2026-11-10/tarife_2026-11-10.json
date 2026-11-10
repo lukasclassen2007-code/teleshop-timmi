@@ -24,7 +24,7 @@
         "Allnet-Flat inklusive",
         "Extra-Bonus beim Nummer-Mitnehmen"
       ],
-      "cta": "Den Preis verrät dir Timmi im Shop!",
+      "cta": "Weitere Infos bei uns im Shop!",
       "kurz": "Sparfuchs"
     },
     {
@@ -72,14 +72,14 @@
       ],
       "typ": "Streamen, zocken, Hotspot",
       "card_top": "Vodafone 5G-Netz",
-      "card_big": "Unlimited",
-      "card_text": "Unbegrenzt surfen – zu einem Preis, bei dem Timmi schnurrt.",
+      "card_big": "Unbegrenzt",
+      "card_text": "Surfen, streamen und zocken, so viel du willst.",
       "extras": [
-        "Unbegrenztes Datenvolumen",
+        "Nie wieder Datenvolumen zählen",
         "Festnetzkunde? Noch günstiger!"
       ],
-      "cta": "Preis-Check? Schnurrstracks in den Shop!",
-      "kurz": "Unlimited"
+      "cta": "Weitere Infos bei uns im Shop!",
+      "kurz": "Unbegrenzt"
     }
   ],
   "familie": {
@@ -94,7 +94,7 @@
       "Festnetzkunde? Noch günstiger!",
       "Weitere Karten möglich"
     ],
-    "cta": "Den Preis flüstert dir Timmi im Shop!"
+    "cta": "Weitere Infos bei uns im Shop!"
   },
   "tipp": {
     "pose": "05_warnung",
