@@ -1,53 +1,120 @@
 {
   "gruppen": [
     {
-      "id": "wenig", "kicker": "WENIGSURFER", "pose": "12_chillen", "bg": [[226, 240, 255], [150, 196, 255]],
+      "id": "wenig",
+      "kicker": "WENIGSURFER",
+      "pose": "12_chillen",
+      "bg": [
+        [
+          226,
+          240,
+          255
+        ],
+        [
+          150,
+          196,
+          255
+        ]
+      ],
       "typ": "Wenig surfen, viel chillen",
       "card_top": "Der Sparfuchs-Tarif",
       "card_big": "Klein & fein",
       "card_text": "Genug Daten für Chats, Mails und Maps – zum kleinen Preis.",
-      "extras": ["Allnet-Flat inklusive", "Extra-Bonus beim Nummer-Mitnehmen"],
+      "extras": [
+        "Allnet-Flat inklusive",
+        "Extra-Bonus beim Nummer-Mitnehmen"
+      ],
       "cta": "Den Preis verrät dir Timmi im Shop!",
       "kurz": "Sparfuchs"
     },
     {
-      "id": "gelegenheit", "kicker": "GELEGENHEITSSURFER", "pose": "02_handy", "bg": [[255, 238, 210], [255, 178, 90]],
+      "id": "gelegenheit",
+      "kicker": "GELEGENHEITSSURFER",
+      "pose": "02_handy",
+      "bg": [
+        [
+          255,
+          238,
+          210
+        ],
+        [
+          255,
+          178,
+          90
+        ]
+      ],
       "typ": "Insta, TikTok & mal 'ne Serie",
       "card_top": "Black-Week-Special",
-      "card_big": "Daten hoch 3",
-      "card_text": "Dreifaches Datenvolumen – zum gleichen Preis wie sonst.",
-      "extras": ["150 GB statt 50 GB", "Extra-Bonus beim Nummer-Mitnehmen"],
+      "card_big": "Dreifaches Datenvolumen",
+      "card_text": "Mehr Daten für Insta, TikTok & Serien – zum gleichen Preis wie sonst.",
+      "extras": [
+        "150 GB statt 50 GB",
+        "Extra-Bonus beim Nummer-Mitnehmen"
+      ],
       "cta": "Komm vorbei – Timmi zeigt's dir!",
-      "kurz": "Daten hoch 3"
+      "kurz": "Dreifaches Datenvolumen"
     },
     {
-      "id": "viel", "kicker": "VIELSURFER", "pose": "08_speed", "bg": [[255, 226, 226], [235, 90, 90]],
+      "id": "viel",
+      "kicker": "VIELSURFER",
+      "pose": "08_speed",
+      "bg": [
+        [
+          255,
+          226,
+          226
+        ],
+        [
+          235,
+          90,
+          90
+        ]
+      ],
       "typ": "Streamen, zocken, Hotspot",
       "card_top": "Vodafone 5G-Netz",
       "card_big": "Unlimited",
       "card_text": "Unbegrenzt surfen – zu einem Preis, bei dem Timmi schnurrt.",
-      "extras": ["Unbegrenztes Datenvolumen", "Festnetzkunde? Noch günstiger!"],
+      "extras": [
+        "Unbegrenztes Datenvolumen",
+        "Festnetzkunde? Noch günstiger!"
+      ],
       "cta": "Preis-Check? Schnurrstracks in den Shop!",
       "kurz": "Unlimited"
     }
   ],
   "familie": {
-    "pose": "16_geschenk", "kicker": "FAMILIENSPEZIAL",
+    "pose": "16_geschenk",
+    "kicker": "FAMILIENSPEZIAL",
     "headline": "Unbegrenztes Datenvolumen",
     "headline2": "für dich & deine Liebsten?",
     "card_top": "Vodafone 5G-Netz",
-    "card_big": "Unbegrenzt zu zweit",
+    "card_big": "Unbegrenzt für die Familie",
     "card_text": "Das schönste Geschenk unterm Baum: grenzenlos surfen für die ganze Familie.",
-    "extras": ["Festnetzkunde? Noch günstiger!", "Weitere Karten möglich"],
+    "extras": [
+      "Festnetzkunde? Noch günstiger!",
+      "Weitere Karten möglich"
+    ],
     "cta": "Den Preis flüstert dir Timmi im Shop!"
   },
   "tipp": {
-    "pose": "05_warnung", "kicker": "TIMMIS SICHERHEITS-TIPP",
+    "pose": "05_warnung",
+    "kicker": "TIMMIS SICHERHEITS-TIPP",
     "headline": "Vorsicht, Fake-Apps!",
     "sub": "Gratis-PDF-Reader, QR-Scanner & Cleaner laden oft Banking-Trojaner nach.",
-    "apps": ["PDF", "QR", "Cleaner"],
-    "punkte": ["QR-Codes kann deine Kamera meist schon", "Cleaner-Apps brauchst du nicht", "App will Bedienungshilfen? Finger weg!"],
+    "apps": [
+      "PDF",
+      "QR",
+      "Cleaner"
+    ],
+    "punkte": [
+      "QR-Codes kann deine Kamera meist schon",
+      "Cleaner-Apps brauchst du nicht",
+      "App will Bedienungshilfen? Finger weg!"
+    ],
     "cta": "Unsicher? Timmi checkt dein Handy!"
   },
-  "funfact": {"big": "Black Friday", "text": "Den Namen erfand in den 1950ern die Polizei in Philadelphia – für das Verkehrschaos am Tag nach Thanksgiving."}
+  "funfact": {
+    "big": "Black Friday",
+    "text": "Den Namen erfand in den 1950ern die Polizei in Philadelphia – für das Verkehrschaos am Tag nach Thanksgiving."
+  }
 }

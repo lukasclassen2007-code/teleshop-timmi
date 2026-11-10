@@ -25,7 +25,7 @@ def note(img, text=NOTE, dark=True):
 def make_story1(data):
     bg = gradient(W, H, (40, 36, 52), (12, 12, 14)).convert("RGBA")
     c = cat("03_idee", 520, 470)
-    rows = [(g["kicker"].title(), g["kurz"]) for g in data["gruppen"]] + [("Familie", "Unbegrenzt zu zweit")]
+    rows = [(g["kicker"].title(), g["kurz"]) for g in data["gruppen"]] + [("Familie", "Unbegrenzt für die Familie")]
 
     def frame(t):
         img = bg.copy()
@@ -45,9 +45,9 @@ def make_story1(data):
             y = 680 + i * 112
 
             def card(dd, x=x, y=y, k=k, v=v):
-                dd.rounded_rectangle((x, y, x + 800, y + 96), radius=30, fill=WHITE)
-                dd.text((x + 36, y + 48), k, font=font("Bold", 38), fill=INK, anchor="lm")
-                dd.text((x + 770, y + 48), v, font=font("Bold", 32), fill=(200, 110, 0), anchor="rm")
+                dd.rounded_rectangle((x, y, x + 800, y + 100), radius=30, fill=WHITE)
+                dd.text((x + 36, y + 12), k, font=font("Bold", 38), fill=INK)
+                dd.text((x + 36, y + 60), v, font=font("Bold", 26), fill=(200, 110, 0))
             layer(img, 1.0, card)
         a = ease((t - 3.4) / 0.5) * (0.7 + 0.3 * math.sin(t * 5) ** 2)
         layer(img, a, lambda dd: pill(dd, W / 2, 1600, "Timmi findet deinen Tarif – im Shop!", 36))
@@ -75,7 +75,7 @@ def make_story2(data):
         head(img, "STORY 2 / 3")
         a = ease((t - 0.2) / 0.5)
         layer(img, a, lambda dd: dd.text((W / 2, 430), "BLACK WEEK", font=font("Bold", 64), fill=INK, anchor="mt"))
-        layer(img, a, lambda dd: dd.text((W / 2, 505), "Datenvolumen hoch 3", font=font("Bold", 64), fill=INK, anchor="mt"))
+        layer(img, a, lambda dd: dd.text((W / 2, 505), "Dreifaches Datenvolumen", font=font("Bold", 64), fill=INK, anchor="mt"))
         # Zähler 50 -> 150 GB
         p = ease((t - 0.9) / 1.4)
         val = 50 + round(100 * p) if t > 0.9 else 50
@@ -124,9 +124,10 @@ def make_story3(data):
 
         def card(dd):
             x0, y0 = W / 2 - 330, 670 + round(30 * (1 - a))
-            dd.rounded_rectangle((x0, y0, x0 + 660, y0 + 250), radius=36, fill=WHITE)
+            dd.rounded_rectangle((x0, y0, x0 + 660, y0 + 290), radius=36, fill=WHITE)
             dd.text((W / 2, y0 + 36), "Vodafone 5G-Netz", font=font("Bold", 34), fill=RED, anchor="mt")
-            dd.text((W / 2, y0 + 84), "Unbegrenzt zu zweit", font=fit(dd, "Unbegrenzt zu zweit", "Bold", 92, 600, 50), fill=INK, anchor="mt")
+            dd.text((W / 2, y0 + 84), "Unbegrenzt", font=font("Bold", 84), fill=INK, anchor="mt")
+            dd.text((W / 2, y0 + 180), "für die Familie", font=font("Bold", 64), fill=INK, anchor="mt")
         layer(img, a, card)
         a = ease((t - 3.2) / 0.5)
         pulse = 1 + 0.035 * math.sin(t * 5)

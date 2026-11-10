@@ -36,12 +36,20 @@ def snow(img, n=40, seed=5):
 def card(img, d, x0, y0, x1, top, big, text, top_col=GREY):
     f_text = font("Medium", 30)
     lines = wrap(d, text, f_text, x1 - x0 - 72)
-    y1 = y0 + 200 + len(lines) * 40 + 30
+    fb = font("Bold", 96)
+    big_lines = [big] if d.textlength(big, font=fb) <= x1 - x0 - 64 else None
+    if big_lines is None:
+        fb = font("Bold", 62)
+        big_lines = wrap(d, big, fb, x1 - x0 - 64)
+    big_h = fb.size + 16
+    y_text = y0 + 84 + len(big_lines) * big_h + 22
+    y1 = y_text + len(lines) * 40 + 30
     d.rounded_rectangle((x0 + 6, y0 + 12, x1 + 6, y1 + 12), radius=36, fill=(0, 0, 0, 40))
     d.rounded_rectangle((x0, y0, x1, y1), radius=36, fill=WHITE)
     d.text((x0 + 36, y0 + 34), top, font=font("Bold", 28), fill=top_col)
-    d.text((x0 + 32, y0 + 78), big, font=fit(d, big, "Bold", 96, x1 - x0 - 64, 36), fill=INK)
-    y = y0 + 200
+    for i, bl in enumerate(big_lines):
+        d.text((x0 + 32, y0 + 78 + i * big_h), bl, font=fb, fill=INK)
+    y = y_text
     for ln in lines:
         d.text((x0 + 36, y), ln, font=f_text, fill=(70, 70, 70))
         y += 40
@@ -72,11 +80,11 @@ def slide_cover(data):
     d.text((46, 300), "Surfer-Typ", font=font("Bold", 110), fill=AMBER)
     d.text((46, 420), "bist du?", font=font("Bold", 110), fill=WHITE)
     y = 600
-    for g in data["gruppen"] + [{"kicker": "FAMILIE", "kurz": "Unbegrenzt zu zweit"}]:
-        d.rounded_rectangle((48, y, 600, y + 84), radius=26, fill=WHITE)
-        d.text((76, y + 42), g["kicker"].title(), font=font("Bold", 28), fill=INK, anchor="lm")
-        d.text((576, y + 42), g["kurz"], font=font("Bold", 22), fill=(200, 110, 0), anchor="rm")
-        y += 100
+    for g in data["gruppen"] + [{"kicker": "FAMILIE", "kurz": "Unbegrenzt für die Familie"}]:
+        d.rounded_rectangle((48, y, 600, y + 98), radius=26, fill=WHITE)
+        d.text((76, y + 16), g["kicker"].title(), font=font("Bold", 30), fill=INK)
+        d.text((76, y + 58), g["kurz"], font=font("Bold", 22), fill=(200, 110, 0))
+        y += 110
     d.text((48, y + 14), "Wisch dich durch und", font=font("Medium", 32), fill=(220, 220, 220))
     d.text((48, y + 56), "finde deinen Tarif!", font=font("Medium", 32), fill=(220, 220, 220))
     rp.draw_hint(d)
@@ -85,8 +93,14 @@ def slide_cover(data):
 
 
 def place_cat(img, pose, text_bottom, cx=810, maxh=560, maxw=470):
+    """Katze unter den Text oder rechts daneben – je nachdem, wo sie größer wird."""
     by = H - FOOT - 30
-    c = cat(pose, maxw, min(maxh, by - text_bottom - 24))
+    below = cat(pose, maxw, max(60, min(maxh, by - text_bottom - 24)))
+    side = cat(pose, 360, min(640, by - 330))
+    if side.height > below.height * 1.15 and cx == 810:
+        c, cx = side, 870
+    else:
+        c = below
     shadow(img, cx, by, c.width * 0.7)
     img.alpha_composite(c, (cx - c.width // 2, by - c.height))
 
@@ -119,7 +133,7 @@ def slide_family(f):
     y1 = card(img, d, 48, 360, 600, f["card_top"], f["card_big"], f["card_text"], RED)
     y = checks(d, y1 + 30, f["extras"], WHITE)
     cta(d, f["cta"], y + 20, fill=AMBER, col=INK)
-    place_cat(img, f["pose"], 360, cx=870, maxh=700, maxw=360)
+    place_cat(img, f["pose"], 360, cx=905, maxh=700, maxw=310)
     rp.footer(ImageDraw.Draw(img))
     return img.convert("RGB")
 
