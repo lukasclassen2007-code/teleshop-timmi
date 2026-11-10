@@ -25,7 +25,7 @@ def note(img, text=NOTE, dark=True):
 def make_story1(data):
     bg = gradient(W, H, (40, 36, 52), (12, 12, 14)).convert("RGBA")
     c = cat("03_idee", 520, 470)
-    rows = [(g["kicker"].title(), g["kurz"]) for g in data["gruppen"]] + [("Familie", "2× Unlimited")]
+    rows = [(g["kicker"].title(), g["kurz"]) for g in data["gruppen"]] + [("Familie", "Unbegrenzt zu zweit")]
 
     def frame(t):
         img = bg.copy()
@@ -75,7 +75,7 @@ def make_story2(data):
         head(img, "STORY 2 / 3")
         a = ease((t - 0.2) / 0.5)
         layer(img, a, lambda dd: dd.text((W / 2, 430), "BLACK WEEK", font=font("Bold", 64), fill=INK, anchor="mt"))
-        layer(img, a, lambda dd: dd.text((W / 2, 505), "3× Datenvolumen", font=font("Bold", 64), fill=INK, anchor="mt"))
+        layer(img, a, lambda dd: dd.text((W / 2, 505), "Datenvolumen hoch 3", font=font("Bold", 64), fill=INK, anchor="mt"))
         # Zähler 50 -> 150 GB
         p = ease((t - 0.9) / 1.4)
         val = 50 + round(100 * p) if t > 0.9 else 50
@@ -126,7 +126,7 @@ def make_story3(data):
             x0, y0 = W / 2 - 330, 670 + round(30 * (1 - a))
             dd.rounded_rectangle((x0, y0, x0 + 660, y0 + 250), radius=36, fill=WHITE)
             dd.text((W / 2, y0 + 36), "Vodafone 5G-Netz", font=font("Bold", 34), fill=RED, anchor="mt")
-            dd.text((W / 2, y0 + 84), "2× Unlimited", font=font("Bold", 92), fill=INK, anchor="mt")
+            dd.text((W / 2, y0 + 84), "Unbegrenzt zu zweit", font=fit(dd, "Unbegrenzt zu zweit", "Bold", 92, 600, 50), fill=INK, anchor="mt")
         layer(img, a, card)
         a = ease((t - 3.2) / 0.5)
         pulse = 1 + 0.035 * math.sin(t * 5)

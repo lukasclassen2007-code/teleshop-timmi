@@ -40,7 +40,7 @@ def card(img, d, x0, y0, x1, top, big, text, top_col=GREY):
     d.rounded_rectangle((x0 + 6, y0 + 12, x1 + 6, y1 + 12), radius=36, fill=(0, 0, 0, 40))
     d.rounded_rectangle((x0, y0, x1, y1), radius=36, fill=WHITE)
     d.text((x0 + 36, y0 + 34), top, font=font("Bold", 28), fill=top_col)
-    d.text((x0 + 32, y0 + 78), big, font=fit(d, big, "Bold", 96, x1 - x0 - 64, 56), fill=INK)
+    d.text((x0 + 32, y0 + 78), big, font=fit(d, big, "Bold", 96, x1 - x0 - 64, 36), fill=INK)
     y = y0 + 200
     for ln in lines:
         d.text((x0 + 36, y), ln, font=f_text, fill=(70, 70, 70))
@@ -72,10 +72,10 @@ def slide_cover(data):
     d.text((46, 300), "Surfer-Typ", font=font("Bold", 110), fill=AMBER)
     d.text((46, 420), "bist du?", font=font("Bold", 110), fill=WHITE)
     y = 600
-    for g in data["gruppen"] + [{"kicker": "FAMILIE", "kurz": "2× Unlimited"}]:
-        d.rounded_rectangle((48, y, 520, y + 84), radius=26, fill=WHITE)
+    for g in data["gruppen"] + [{"kicker": "FAMILIE", "kurz": "Unbegrenzt zu zweit"}]:
+        d.rounded_rectangle((48, y, 600, y + 84), radius=26, fill=WHITE)
         d.text((76, y + 42), g["kicker"].title(), font=font("Bold", 28), fill=INK, anchor="lm")
-        d.text((496, y + 42), g["kurz"], font=font("Bold", 24), fill=(200, 110, 0), anchor="rm")
+        d.text((576, y + 42), g["kurz"], font=font("Bold", 22), fill=(200, 110, 0), anchor="rm")
         y += 100
     d.text((48, y + 14), "Wisch dich durch und", font=font("Medium", 32), fill=(220, 220, 220))
     d.text((48, y + 56), "finde deinen Tarif!", font=font("Medium", 32), fill=(220, 220, 220))

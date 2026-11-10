@@ -14,11 +14,11 @@
       "id": "gelegenheit", "kicker": "GELEGENHEITSSURFER", "pose": "02_handy", "bg": [[255, 238, 210], [255, 178, 90]],
       "typ": "Insta, TikTok & mal 'ne Serie",
       "card_top": "Black-Week-Special",
-      "card_big": "3× Daten",
+      "card_big": "Daten hoch 3",
       "card_text": "Dreifaches Datenvolumen – zum gleichen Preis wie sonst.",
       "extras": ["150 GB statt 50 GB", "Extra-Bonus beim Nummer-Mitnehmen"],
       "cta": "Komm vorbei – Timmi zeigt's dir!",
-      "kurz": "3× Daten"
+      "kurz": "Daten hoch 3"
     },
     {
       "id": "viel", "kicker": "VIELSURFER", "pose": "08_speed", "bg": [[255, 226, 226], [235, 90, 90]],
@@ -36,7 +36,7 @@
     "headline": "Unbegrenztes Datenvolumen",
     "headline2": "für dich & deine Liebsten?",
     "card_top": "Vodafone 5G-Netz",
-    "card_big": "2× Unlimited",
+    "card_big": "Unbegrenzt zu zweit",
     "card_text": "Das schönste Geschenk unterm Baum: grenzenlos surfen für die ganze Familie.",
     "extras": ["Festnetzkunde? Noch günstiger!", "Weitere Karten möglich"],
     "cta": "Den Preis flüstert dir Timmi im Shop!"
