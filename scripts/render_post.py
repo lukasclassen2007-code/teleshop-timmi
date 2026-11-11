@@ -48,9 +48,8 @@ def slide_tip(p, hint=True):
     return img.convert("RGB")
 
 
-def draw_hint(d):
+def draw_hint(d, label="FUN-FACT"):
     tf = font("Bold", 22)
-    label = "FUN-FACT"
     lw = d.textlength(label, font=tf)
     x1 = W - 48
     d.rounded_rectangle((x1 - lw - 70, 44, x1, 90), radius=23, fill=INK)

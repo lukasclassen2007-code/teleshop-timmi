@@ -27,7 +27,7 @@ def slide_cover(c):
         d.text((76, y + 12), a, font=font("Bold", 30), fill=INK)
         d.text((76, y + 52), b, font=font("Bold", 22), fill=(200, 110, 0))
         y += 102
-    rp.draw_hint(d)
+    rp.draw_hint(d, "WISCHEN")
     rp.footer(d)
     return img.convert("RGB")
 
