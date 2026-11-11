@@ -56,25 +56,32 @@
     "cta": "Weitere Infos bei uns im Shop!"
   },
   "gta": {
+    "id": "gta",
     "kicker": "GAMING",
     "pose": "08_speed",
-    "titel": "GTA VI kommt am 19.11.",
-    "frage": "Ist dein Internet bereit?",
-    "zeilen": [
+    "bg": [
       [
-        "Langsames Internet",
-        "Stunden warten",
-        0.15
+        248,
+        226,
+        255
       ],
       [
-        "Schnelles Internet",
-        "Minuten – los geht's!",
-        1.0
+        200,
+        120,
+        240
       ]
     ],
-    "label": "",
-    "hinweis": "",
-    "cta": "Speed-Check? Komm vorbei!"
+    "typ": "GTA VI kommt am 19.11.",
+    "card_top": "Großes Spiel, großer Download",
+    "card_big": "Bereit zum Zocken?",
+    "card_text": "Mit schnellem Internet bist du am Release-Tag direkt dabei.",
+    "extras": [
+      "Schnell geladen",
+      "Stabil beim Online-Zocken"
+    ],
+    "cta": "Weitere Infos bei uns im Shop!",
+    "titel": "GTA VI kommt am 19.11.",
+    "frage": "Ist dein Internet bereit?"
   },
   "haushalt": {
     "id": "haushalt",

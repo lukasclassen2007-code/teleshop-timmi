@@ -18,45 +18,42 @@ def cta_bottom(img, t, text, t0=3.2, fill=AMBER, col=INK):
     layer(img, a, lambda dd: dd.text((W / 2, 1712), "Poststraße 34 · Mo–Fr 9–17 Uhr", font=font("Bold", 36), fill=WHITE if fill == AMBER else INK, anchor="mt"))
 
 
-# ---------- Story 1: GTA VI – Download-Balken füllen sich ----------
+# ---------- Story 1: GTA VI – Download lädt auf 100 %, dann "Bereit!" ----------
 def make_story1(data):
     g = data["gta"]
     bg = gradient(W, H, (34, 22, 60), (12, 10, 20)).convert("RGBA")
     glow(bg, 820, 1300, 460, (255, 80, 170), 0.45)
     glow(bg, 200, 500, 420, (80, 160, 255), 0.35)
-    c = cat(g["pose"], 600, 400)
+    c = cat(g["pose"], 640, 440)
 
     def frame(t):
         img = bg.copy()
-        if t >= 2.6:
-            p = ease((t - 2.6) / 0.8)
+        if t >= 2.9:
+            p = ease((t - 2.9) / 0.8)
             x = W // 2 - c.width // 2 + round((1 - p) * 1200)
-            img.alpha_composite(c, (x, 1560 - c.height))
+            img.alpha_composite(c, (x, 1540 - c.height))
         head(img, "STORY 1 / 3")
         a = ease((t - 0.2) / 0.5)
         layer(img, a, lambda dd: dd.text((W / 2, 430), g["titel"], font=fit(dd, g["titel"], "Bold", 84, W - 80, 50), fill=WHITE, anchor="mt"))
         a2 = ease((t - 0.6) / 0.5)
-        layer(img, a2, lambda dd: dd.text((W / 2, 540), g["frage"], font=fit(dd, g["frage"], "Bold", 60, W - 80, 36), fill=AMBER, anchor="mt"))
+        layer(img, a2, lambda dd: dd.text((W / 2, 540), g["frage"], font=fit(dd, g["frage"], "Bold", 64, W - 80, 36), fill=AMBER, anchor="mt"))
+        a3 = ease((t - 1.0) / 0.4)
+        p = ease((t - 1.2) / 1.5)
+        pct = round(100 * p) if t > 1.2 else 0
 
-        # Balken füllen sich unterschiedlich schnell – wer zuerst voll ist, gewinnt
-        for i, (speed, zeit, frac) in enumerate(g["zeilen"]):
-            y = 700 + i * 190
-            a = ease((t - 1.0 - i * 0.15) / 0.4)
-            if a <= 0:
-                continue
-            p = min(1.0, max(0.0, (t - 1.4) / 1.6) * frac / g["zeilen"][-1][2]) * frac
-            done = (p >= frac - 1e-6 and t > 1.4 + 1.6 * frac) or t > 3.3
-
-            def row(dd, y=y, speed=speed, zeit=zeit, p=p, done=done):
-                dd.rounded_rectangle((70, y, W - 70, y + 160), radius=30, fill=WHITE)
-                dd.text((110, y + 26), speed, font=font("Bold", 44), fill=INK)
-                if done:
-                    dd.text((W - 110, y + 30), zeit, font=font("Bold", 38), fill=(200, 110, 0) if speed.startswith("Schnell") else (120, 120, 120), anchor="ra")
-                dd.rounded_rectangle((110, y + 110, W - 110, y + 134), radius=12, fill=(230, 230, 236))
-                if p > 0.01:
-                    dd.rounded_rectangle((110, y + 110, 110 + round((W - 220) * p), y + 134), radius=12, fill=AMBER)
-            layer(img, a, row)
-        cta_bottom(img, t, "Speed-Check? Komm vorbei!", t0=3.6)
+        def bar(dd):
+            y = 700
+            dd.rounded_rectangle((70, y, W - 70, y + 200), radius=34, fill=WHITE)
+            dd.text((110, y + 34), "Download", font=font("Bold", 44), fill=INK)
+            dd.text((W - 110, y + 34), f"{pct} %", font=font("Bold", 44), fill=(190, 0, 140), anchor="ra")
+            dd.rounded_rectangle((110, y + 120, W - 110, y + 154), radius=17, fill=(230, 230, 236))
+            if p > 0.01:
+                dd.rounded_rectangle((110, y + 120, 110 + round((W - 220) * p), y + 154), radius=17, fill=AMBER)
+        layer(img, a3, bar)
+        q = back((t - 2.8) / 0.45)
+        if q > 0:
+            pill(ImageDraw.Draw(img), W / 2, 950, "✓ Bereit zum Zocken!".replace("✓ ", ""), max(10, round(44 * q)), fill=AMBER, col=INK)
+        cta_bottom(img, t, g["cta"], t0=3.8)
         return img
     return frame
 
