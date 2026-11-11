@@ -56,21 +56,20 @@ def slide_gta(g):
     pill(d, 48, 118, g["kicker"])
     d.text((46, 176), g["titel"], font=fit(d, g["titel"], "Bold", 76, W - 96, 40), fill=WHITE)
     d.text((48, 270), g["frage"], font=fit(d, g["frage"], "Bold", 52, W - 96, 30), fill=AMBER)
-    d.text((48, 370), g["label"], font=font("Medium", 30), fill=(210, 210, 210))
-    y = 430
+    y = 400
     for speed, zeit, frac in g["zeilen"]:
-        d.rounded_rectangle((48, y, 1032, y + 120), radius=28, fill=(255, 255, 255, 255))
-        d.text((80, y + 30), speed, font=font("Bold", 36), fill=INK)
-        d.text((1000, y + 30), zeit, font=font("Bold", 36), fill=INK, anchor="ra")
-        d.rounded_rectangle((80, y + 82, 1000, y + 100), radius=9, fill=(230, 230, 236))
-        d.rounded_rectangle((80, y + 82, 80 + round(920 * frac), y + 100), radius=9, fill=AMBER)
-        y += 140
+        d.rounded_rectangle((48, y, 1032, y + 150), radius=30, fill=(255, 255, 255, 255))
+        d.text((80, y + 30), speed, font=font("Bold", 40), fill=INK)
+        d.text((1000, y + 30), zeit, font=font("Bold", 40), fill=(200, 110, 0) if frac >= 1 else (120, 120, 120), anchor="ra")
+        d.rounded_rectangle((80, y + 100, 1000, y + 122), radius=11, fill=(230, 230, 236))
+        d.rounded_rectangle((80, y + 100, 80 + round(920 * frac), y + 122), radius=11, fill=AMBER)
+        y += 175
     k = cat(g["pose"], 470, H - FOOT - 30 - (y + 120))
     img.alpha_composite(k, (800 - k.width // 2, H - FOOT - 30 - k.height))
     d = ImageDraw.Draw(img)
     pill(d, 48, y + 20, g["cta"], 28)
     yy = y + 100
-    for ln in wrap(d, g["hinweis"], font("Regular", 20), 520):
+    for ln in wrap(d, g["hinweis"], font("Regular", 20), 520) if g["hinweis"] else []:
         d.text((48, yy), ln, font=font("Regular", 20), fill=(190, 190, 190))
         yy += 26
     rp.footer(d)

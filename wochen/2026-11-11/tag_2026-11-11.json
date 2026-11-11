@@ -1,42 +1,121 @@
 {
   "cover": {
     "kicker": "MITTWOCH · 11.11.",
-    "titel": ["Timmis", "Themen", "für heute"],
-    "punkte": [["Glasfaser", "Wir helfen dir"], ["GTA VI", "Internet schnell genug?"], ["Haushalts-Check", "Strom, Gas, Internet, Handy"], ["Gaming-Tipp", "Kabel rein!"], ["Fun-Fact", "Was ist am 11.11.?"]]
+    "titel": [
+      "Timmis",
+      "Themen",
+      "für heute"
+    ],
+    "punkte": [
+      [
+        "Glasfaser",
+        "Wir helfen dir"
+      ],
+      [
+        "GTA VI",
+        "Ist dein Internet bereit?"
+      ],
+      [
+        "Haushalts-Check",
+        "Strom, Gas, Internet, Handy"
+      ],
+      [
+        "Speed-Tipp",
+        "Mehr Tempo zu Hause"
+      ],
+      [
+        "Fun-Fact",
+        "Was ist am 11.11.?"
+      ]
+    ]
   },
   "glasfaser": {
-    "id": "glasfaser", "kicker": "GLASFASER", "pose": "10_router", "bg": [[218, 246, 240], [96, 200, 180]],
+    "id": "glasfaser",
+    "kicker": "GLASFASER",
+    "pose": "10_router",
+    "bg": [
+      [
+        218,
+        246,
+        240
+      ],
+      [
+        96,
+        200,
+        180
+      ]
+    ],
     "typ": "Glasfaser kommt? Wir helfen dir!",
     "card_top": "Dein Ansprechpartner vor Ort",
     "card_big": "Glasfaser",
     "card_text": "Fragen zum Ausbau, zum Vertrag oder zur Bestellung? Wir sind persönlich für dich da.",
-    "extras": ["Antworten auf deine Rückfragen", "Hilfe bei der Bestellung"],
+    "extras": [
+      "Antworten auf deine Rückfragen",
+      "Hilfe bei der Bestellung"
+    ],
     "cta": "Weitere Infos bei uns im Shop!"
   },
   "gta": {
-    "kicker": "GAMING", "pose": "08_speed",
+    "kicker": "GAMING",
+    "pose": "08_speed",
     "titel": "GTA VI kommt am 19.11.",
-    "frage": "Ist dein Internet schnell genug?",
-    "zeilen": [["50 Mbit/s", "ca. 7 Std.", 0.12], ["250 Mbit/s", "ca. 80 Min.", 0.45], ["1.000 Mbit/s", "ca. 20 Min.", 1.0]],
-    "label": "Download-Zeit für ein Spiel mit 150 GB",
-    "hinweis": "Beispielrechnung mit voller Bandbreite. Die echte Spielgröße steht erst zum Release fest.",
-    "cta": "Speed-Check? Weitere Infos bei uns im Shop!"
+    "frage": "Ist dein Internet bereit?",
+    "zeilen": [
+      [
+        "Langsames Internet",
+        "Stunden warten",
+        0.15
+      ],
+      [
+        "Schnelles Internet",
+        "Minuten – los geht's!",
+        1.0
+      ]
+    ],
+    "label": "",
+    "hinweis": "",
+    "cta": "Speed-Check? Komm vorbei!"
   },
   "haushalt": {
-    "id": "haushalt", "kicker": "HAUSHALTS-CHECK", "pose": "06_detektiv", "bg": [[240, 232, 255], [170, 150, 245]],
+    "id": "haushalt",
+    "kicker": "HAUSHALTS-CHECK",
+    "pose": "06_detektiv",
+    "bg": [
+      [
+        240,
+        232,
+        255
+      ],
+      [
+        170,
+        150,
+        245
+      ]
+    ],
     "typ": "Zahlst du zu viel?",
     "card_top": "Strom · Gas · Internet · Mobilfunk",
     "card_big": "Alles in einem Check",
     "card_text": "Bring deine aktuellen Rechnungen mit – wir schauen gemeinsam, wo du sparen kannst.",
-    "extras": ["Strom & Gas", "Internet & Mobilfunk"],
+    "extras": [
+      "Strom & Gas",
+      "Internet & Mobilfunk"
+    ],
     "cta": "Weitere Infos bei uns im Shop!"
   },
   "tipp": {
-    "pose": "04_zeigen", "kicker": "TIMMIS GAMING-TIPP",
-    "headline": "Zocken? Kabel rein!",
-    "sub": "Per LAN-Kabel läuft's stabiler und meist schneller als über WLAN.",
-    "punkte": ["Konsole oder PC per LAN-Kabel an den Router", "Große Downloads über Nacht laden lassen", "Router-Updates regelmäßig installieren"],
-    "cta": "Unsicher? Timmi hilft dir im Shop!"
+    "pose": "04_zeigen",
+    "kicker": "TIMMIS SPEED-TIPP",
+    "headline": "Mehr Tempo zu Hause!",
+    "sub": "Mit drei Handgriffen läuft dein Internet oft spürbar besser.",
+    "punkte": [
+      "Router frei und zentral aufstellen",
+      "Wichtige Geräte per LAN-Kabel verbinden",
+      "Router ab und zu neu starten"
+    ],
+    "cta": "Immer noch zu langsam? Komm vorbei!"
   },
-  "funfact": {"big": "11.11.", "text": "In China ist heute Singles' Day – der größte Shopping-Tag der Welt. Schon 2017 liefen bei Alibaba rund 90 % der Umsätze übers Handy."}
+  "funfact": {
+    "big": "11.11.",
+    "text": "In China ist heute Singles' Day – der größte Shopping-Tag der Welt. Schon 2017 liefen bei Alibaba rund 90 % der Umsätze übers Handy."
+  }
 }

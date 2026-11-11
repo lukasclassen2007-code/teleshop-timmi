@@ -37,11 +37,10 @@ def make_story1(data):
         layer(img, a, lambda dd: dd.text((W / 2, 430), g["titel"], font=fit(dd, g["titel"], "Bold", 84, W - 80, 50), fill=WHITE, anchor="mt"))
         a2 = ease((t - 0.6) / 0.5)
         layer(img, a2, lambda dd: dd.text((W / 2, 540), g["frage"], font=fit(dd, g["frage"], "Bold", 60, W - 80, 36), fill=AMBER, anchor="mt"))
-        a3 = ease((t - 0.9) / 0.5)
-        layer(img, a3, lambda dd: dd.text((W / 2, 640), g["label"], font=font("Medium", 34), fill=(210, 210, 210), anchor="mt"))
+
         # Balken füllen sich unterschiedlich schnell – wer zuerst voll ist, gewinnt
         for i, (speed, zeit, frac) in enumerate(g["zeilen"]):
-            y = 720 + i * 150
+            y = 700 + i * 190
             a = ease((t - 1.0 - i * 0.15) / 0.4)
             if a <= 0:
                 continue
@@ -49,13 +48,13 @@ def make_story1(data):
             done = (p >= frac - 1e-6 and t > 1.4 + 1.6 * frac) or t > 3.3
 
             def row(dd, y=y, speed=speed, zeit=zeit, p=p, done=done):
-                dd.rounded_rectangle((70, y, W - 70, y + 130), radius=30, fill=WHITE)
-                dd.text((110, y + 26), speed, font=font("Bold", 40), fill=INK)
+                dd.rounded_rectangle((70, y, W - 70, y + 160), radius=30, fill=WHITE)
+                dd.text((110, y + 26), speed, font=font("Bold", 44), fill=INK)
                 if done:
-                    dd.text((W - 110, y + 26), zeit, font=font("Bold", 40), fill=INK, anchor="ra")
-                dd.rounded_rectangle((110, y + 88, W - 110, y + 108), radius=10, fill=(230, 230, 236))
+                    dd.text((W - 110, y + 30), zeit, font=font("Bold", 38), fill=(200, 110, 0) if speed.startswith("Schnell") else (120, 120, 120), anchor="ra")
+                dd.rounded_rectangle((110, y + 110, W - 110, y + 134), radius=12, fill=(230, 230, 236))
                 if p > 0.01:
-                    dd.rounded_rectangle((110, y + 88, 110 + round((W - 220) * p), y + 108), radius=10, fill=AMBER)
+                    dd.rounded_rectangle((110, y + 110, 110 + round((W - 220) * p), y + 134), radius=12, fill=AMBER)
             layer(img, a, row)
         cta_bottom(img, t, "Speed-Check? Komm vorbei!", t0=3.6)
         return img
