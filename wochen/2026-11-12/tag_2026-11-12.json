@@ -35,20 +35,7 @@
     ],
     "text": "Klapphandy, Schiebehandy oder der unkaputtbare Klassiker? Jeder hat da seine eigene Geschichte. Timmi ist schon gespannt auf deine!",
     "cta": "Schreib's in die Kommentare!",
-    "phones": [
-      [
-        70,
-        800,
-        320,
-        "Hallo?"
-      ],
-      [
-        290,
-        880,
-        240,
-        null
-      ]
-    ],
+    "phones": [],
     "hint": false
   },
   "funfact": {

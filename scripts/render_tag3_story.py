@@ -29,7 +29,7 @@ def flip_phone(d, x, y, s):
     hh = s * 0.48
     d.rounded_rectangle((x, y, x + w, y + hh), radius=w * 0.2, fill=(150, 60, 160), outline=EDGE, width=4)
     d.rounded_rectangle((x + w * 0.12, y + hh * 0.14, x + w * 0.88, y + hh * 0.8), radius=w * 0.06, fill=SCR)
-    d.rounded_rectangle((x - 4, y + hh - 6, x + w + 4, y + hh + 22), radius=12, fill=EDGE)
+    d.rounded_rectangle((x + w * 0.1, y + hh - 8, x + w * 0.9, y + hh + 24), radius=12, fill=(125, 50, 135), outline=EDGE, width=3)
     y2 = y + hh + 16
     d.rounded_rectangle((x, y2, x + w, y2 + hh), radius=w * 0.2, fill=(150, 60, 160), outline=EDGE, width=4)
     keys(d, x, y2 + hh * 0.08, w, hh * 0.82)
