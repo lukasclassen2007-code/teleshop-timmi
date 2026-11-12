@@ -94,7 +94,7 @@ def story1():
             ImageDraw.Draw(img).text((W / 2, 520), full[:k], font=f, fill=WHITE, anchor="mt")
         a = ease((t - 1.3) / 0.4)
         layer(img, a, lambda dd: dd.text((W / 2, 625), "welches war's?", font=f, fill=AMBER, anchor="mt"))
-        cta_bottom(img, t, "Schreib's unter unseren Beitrag!", t0=3.2)
+        cta_bottom(img, t, "Komm vorbei – Timmi freut sich!", t0=3.2)
         return img
     return frame
 
