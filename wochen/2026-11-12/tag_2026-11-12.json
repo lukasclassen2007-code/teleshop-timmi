@@ -1,0 +1,65 @@
+{
+  "cover": {
+    "kicker": "THROWBACK THURSDAY",
+    "pose": "09_empfang",
+    "titel": [
+      "Was war",
+      "dein erstes",
+      "Handy?"
+    ],
+    "text": "Klapphandy, Schiebehandy oder doch schon Smartphone? Timmi ist neugierig!",
+    "cta": "Schreib's in die Kommentare!"
+  },
+  "funfact": {
+    "big": "Nokia 3310",
+    "text": "Kam im Jahr 2000 auf den Markt und wurde über 120 Millionen Mal verkauft – ein echter Klassiker!"
+  },
+  "schublade": {
+    "pose": "02_handy",
+    "kicker": "WOHIN MIT DEM ALTEN HANDY?",
+    "bg": [
+      [
+        236,
+        244,
+        228
+      ],
+      [
+        150,
+        205,
+        120
+      ]
+    ],
+    "headline": "Altes Handy in der Schublade?",
+    "sub": "Damit bist du nicht allein: In deutschen Haushalten liegen 167 Millionen ungenutzte Handys (Bitkom, 2026).",
+    "punkte": [
+      "Daten sichern und aufs neue Handy übertragen",
+      "Auf Werkseinstellungen zurücksetzen, SIM- und Speicherkarte raus",
+      "Nicht in den Hausmüll – ab zum Wertstoffhof oder zur Rücknahme im Handel"
+    ],
+    "cta": "Fragen dazu? Weitere Infos bei uns im Shop!"
+  },
+  "kaelte": {
+    "pose": "14_herbst",
+    "kicker": "TIMMIS WINTER-TIPP",
+    "bg": [
+      [
+        232,
+        244,
+        255
+      ],
+      [
+        150,
+        200,
+        240
+      ]
+    ],
+    "headline": "Kälte frisst Akku!",
+    "sub": "Bei Kälte sinkt die Akkuleistung – der Akkustand fällt dann plötzlich schneller.",
+    "punkte": [
+      "Handy in die Innentasche, nah am Körper",
+      "Nicht stundenlang im kalten Auto liegen lassen",
+      "Erst aufwärmen lassen, dann laden"
+    ],
+    "cta": "Akku schwächelt trotzdem? Komm vorbei!"
+  }
+}
