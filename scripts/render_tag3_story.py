@@ -12,34 +12,88 @@ from render_tag_story import cta_bottom
 MAG = (226, 0, 116)
 
 
+BODY, EDGE, SCR, KEY = (60, 66, 80), (20, 20, 24), (170, 200, 150), (200, 205, 215)
+
+
+def keys(d, x, y, w, h, rows=4):
+    for r in range(rows):
+        for c in range(3):
+            cx = x + w * (0.25 + c * 0.25)
+            cy = y + h * (0.15 + r * (0.75 / (rows - 1)))
+            d.ellipse((cx - w * 0.08, cy - h * 0.045, cx + w * 0.08, cy + h * 0.045), fill=KEY)
+
+
+def flip_phone(d, x, y, s):
+    """Aufgeklapptes Klapphandy: Display oben, Scharnier, Tasten unten."""
+    w = 0.42 * s
+    hh = s * 0.48
+    d.rounded_rectangle((x, y, x + w, y + hh), radius=w * 0.2, fill=(150, 60, 160), outline=EDGE, width=4)
+    d.rounded_rectangle((x + w * 0.12, y + hh * 0.14, x + w * 0.88, y + hh * 0.8), radius=w * 0.06, fill=SCR)
+    d.rounded_rectangle((x - 4, y + hh - 6, x + w + 4, y + hh + 22), radius=12, fill=EDGE)
+    y2 = y + hh + 16
+    d.rounded_rectangle((x, y2, x + w, y2 + hh), radius=w * 0.2, fill=(150, 60, 160), outline=EDGE, width=4)
+    keys(d, x, y2 + hh * 0.08, w, hh * 0.82)
+
+
+def slide_phone(d, x, y, s, t):
+    """Schiebehandy: Displayteil gleitet über dem Tastenteil hoch und runter."""
+    w = 0.42 * s
+    hh = s * 0.6
+    ky = y + s - hh
+    d.rounded_rectangle((x + 6, ky, x + w - 6, y + s), radius=w * 0.18, fill=(40, 44, 54), outline=EDGE, width=4)
+    keys(d, x + 6, ky + hh * 0.42, w - 12, hh * 0.5)
+    o = 0.65 + 0.35 * math.sin(t * 2.2)
+    sy = ky - o * hh * 0.62
+    d.rounded_rectangle((x, sy, x + w, sy + hh), radius=w * 0.2, fill=(30, 110, 200), outline=EDGE, width=4)
+    d.rounded_rectangle((x + w * 0.12, sy + hh * 0.1, x + w * 0.88, sy + hh * 0.72), radius=w * 0.06, fill=SCR)
+
+
+def antenna_phone(d, x, y, s):
+    """Klassiker mit kleiner Antenne."""
+    w = 0.42 * s
+    d.rounded_rectangle((x + w * 0.66, y - s * 0.16, x + w * 0.84, y + 10), radius=w * 0.08, fill=EDGE)
+    d.rounded_rectangle((x, y, x + w, y + s), radius=w * 0.28, fill=BODY, outline=EDGE, width=4)
+    d.rounded_rectangle((x + w * 0.14, y + s * 0.12, x + w * 0.86, y + s * 0.42), radius=w * 0.06, fill=SCR)
+    d.text((x + w / 2, y + s * 0.27), "Hallo?", font=font("Bold", int(s * 0.07)), fill=(40, 60, 40), anchor="mm")
+    keys(d, x, y + s * 0.5, w, s * 0.45)
+
+
 def story1():
     bg = gradient(W, H, (40, 36, 52), (12, 12, 14)).convert("RGBA")
-    c = cat("09_empfang", 560, 560)
+    c = cat("09_empfang", 360, 360)
+    S = 360
+    slots = ((200, "Klapphandy", 0.9), (W // 2, "Schiebehandy", 1.2), (W - 200, "Mit Antenne", 1.5))
 
     def frame(t):
         img = bg.copy()
-        glow(img, W // 2, 1250, round(430 + 30 * math.sin(t * 2.5)), AMBER, 0.55)
+        glow(img, W // 2, 1300, round(430 + 30 * math.sin(t * 2.5)), AMBER, 0.55)
         lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
         ld = ImageDraw.Draw(lay)
-        for i, (x, s, t0) in enumerate(((90, 380, 0.3), (720, 330, 0.5))):
-            p = ease((t - t0) / 0.8)
-            if p > 0:
-                y = round(1080 + (1 - p) * 900 + math.sin(t * 2 + i) * 10)
-                retro_phone(ld, x, y, s, "Hallo?" if i == 0 else None)
+        for i, (cx, lab, t0) in enumerate(slots):
+            p = ease((t - t0) / 0.7)
+            if p <= 0:
+                continue
+            y = round(790 + (1 - p) * 1200 + math.sin(t * 2 + i) * 8)
+            x = cx - 0.42 * S / 2
+            if i == 0:
+                flip_phone(ld, x, y, S * 0.78)
+            elif i == 1:
+                slide_phone(ld, x, y, S, t)
+            else:
+                antenna_phone(ld, x, y + 50, S * 0.86)
+            ld.text((cx, y + S + 30), lab, font=font("Bold", 36), fill=(255, 255, 255, round(255 * p)), anchor="mt")
         img.alpha_composite(lay)
-        rs.put_cat(img, c, W // 2, 1560, 1.0, t, "pop")
+        rs.put_cat(img, c, W // 2, 1585, 2.0, t, "pop")
         head(img, "STORY 1 / 3")
         a = ease((t - 0.2) / 0.5)
         layer(img, a, lambda dd: dd.text((W / 2, 430), "ERINNERST DU DICH?", font=font("Bold", 52), fill=AMBER, anchor="mt"))
         full = "Dein erstes Handy –"
-        k = min(len(full), max(0, int((t - 0.6) / 0.05)))
+        k = min(len(full), max(0, int((t - 0.5) / 0.04)))
         f = font("Bold", 84)
         if k:
             ImageDraw.Draw(img).text((W / 2, 520), full[:k], font=f, fill=WHITE, anchor="mt")
-        a = ease((t - 1.7) / 0.4)
+        a = ease((t - 1.3) / 0.4)
         layer(img, a, lambda dd: dd.text((W / 2, 625), "welches war's?", font=f, fill=AMBER, anchor="mt"))
-        a = ease((t - 2.4) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 760), "Klapphandy, Schiebehandy oder Klassiker?", font=fit(dd, "Klapphandy, Schiebehandy oder Klassiker?", "Medium", 46, W - 100, 30), fill=(220, 220, 220), anchor="mt"))
         cta_bottom(img, t, "Verrat's uns per DM!", t0=3.2)
         return img
     return frame
