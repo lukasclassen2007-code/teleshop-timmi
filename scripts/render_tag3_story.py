@@ -62,7 +62,7 @@ def story1():
     bg = gradient(W, H, (40, 36, 52), (12, 12, 14)).convert("RGBA")
     c = cat("09_empfang", 360, 360)
     S = 360
-    slots = ((200, "Klapphandy", 0.9), (W // 2, "Schiebehandy", 1.2), (W - 200, "Mit Antenne", 1.5))
+    slots = ((200, "Klapphandy", 0.9), (W // 2, "Schiebehandy", 1.2), (W - 200, "Klassiker", 1.5))
 
     def frame(t):
         img = bg.copy()
@@ -94,7 +94,7 @@ def story1():
             ImageDraw.Draw(img).text((W / 2, 520), full[:k], font=f, fill=WHITE, anchor="mt")
         a = ease((t - 1.3) / 0.4)
         layer(img, a, lambda dd: dd.text((W / 2, 625), "welches war's?", font=f, fill=AMBER, anchor="mt"))
-        cta_bottom(img, t, "Verrat's uns per DM!", t0=3.2)
+        cta_bottom(img, t, "Schreib's unter unseren Beitrag!", t0=3.2)
         return img
     return frame
 
