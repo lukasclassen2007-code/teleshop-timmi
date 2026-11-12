@@ -1,65 +1,108 @@
 {
   "cover": {
-    "kicker": "THROWBACK THURSDAY",
+    "kicker": "DONNERSTAG · 12.11.",
+    "titel": [
+      "Timmis",
+      "Themen",
+      "für heute"
+    ],
+    "punkte": [
+      [
+        "Dein erstes Handy",
+        "Verrat's uns!"
+      ],
+      [
+        "Throwback Thursday",
+        "Ein Frosch auf Platz 1?"
+      ],
+      [
+        "MagentaTV",
+        "Fernsehen, wie du willst"
+      ],
+      [
+        "Timmis Tipp",
+        "Älteres Smartphone fit halten"
+      ]
+    ]
+  },
+  "erstes": {
+    "kicker": "ERINNERST DU DICH?",
     "pose": "09_empfang",
     "titel": [
-      "Was war",
-      "dein erstes",
-      "Handy?"
+      "Dein erstes",
+      "Handy –",
+      "welches war's?"
     ],
-    "text": "Klapphandy, Schiebehandy oder doch schon Smartphone? Timmi ist neugierig!",
-    "cta": "Schreib's in die Kommentare!"
+    "text": "Klapphandy, Schiebehandy oder der unkaputtbare Klassiker? Jeder hat da seine eigene Geschichte. Timmi ist schon gespannt auf deine!",
+    "cta": "Verrat's uns in den Kommentaren!",
+    "phones": [
+      [
+        70,
+        800,
+        320,
+        "Hallo?"
+      ],
+      [
+        290,
+        880,
+        240,
+        null
+      ]
+    ],
+    "hint": false
   },
   "funfact": {
-    "big": "Nokia 3310",
-    "text": "Kam im Jahr 2000 auf den Markt und wurde über 120 Millionen Mal verkauft – ein echter Klassiker!"
+    "big": "2005",
+    "text": "Da stürmte ein Klingelton-Frosch die Charts: Der Crazy Frog landete mit „Axel F“ auf Platz 1 in Großbritannien – noch vor Coldplay!"
   },
-  "schublade": {
-    "pose": "02_handy",
-    "kicker": "WOHIN MIT DEM ALTEN HANDY?",
+  "magenta": {
+    "id": "magenta",
+    "kicker": "MAGENTATV",
+    "pose": "18_danke",
     "bg": [
       [
-        236,
-        244,
-        228
-      ],
-      [
-        150,
-        205,
-        120
-      ]
-    ],
-    "headline": "Altes Handy in der Schublade?",
-    "sub": "Damit bist du nicht allein: In deutschen Haushalten liegen 167 Millionen ungenutzte Handys (Bitkom, 2026).",
-    "punkte": [
-      "Daten sichern und aufs neue Handy übertragen",
-      "Auf Werkseinstellungen zurücksetzen, SIM- und Speicherkarte raus",
-      "Nicht in den Hausmüll – ab zum Wertstoffhof oder zur Rücknahme im Handel"
-    ],
-    "cta": "Fragen dazu? Weitere Infos bei uns im Shop!"
-  },
-  "kaelte": {
-    "pose": "14_herbst",
-    "kicker": "TIMMIS WINTER-TIPP",
-    "bg": [
-      [
+        255,
         232,
-        244,
-        255
+        244
       ],
       [
-        150,
-        200,
-        240
+        240,
+        130,
+        190
       ]
     ],
-    "headline": "Kälte frisst Akku!",
-    "sub": "Bei Kälte sinkt die Akkuleistung – der Akkustand fällt dann plötzlich schneller.",
-    "punkte": [
-      "Handy in die Innentasche, nah am Körper",
-      "Nicht stundenlang im kalten Auto liegen lassen",
-      "Erst aufwärmen lassen, dann laden"
+    "typ": "Gemütliche Winterabende?",
+    "card_top": "Fernsehen, wie du willst",
+    "card_big": "MagentaTV",
+    "card_text": "Über 210 Sender und Streamingdienste wie Netflix, Disney+ oder RTL+ – alles in einer Oberfläche.",
+    "extras": [
+      "Auf TV, Handy und Tablet",
+      "Auch ohne Telekom-Internet"
     ],
-    "cta": "Akku schwächelt trotzdem? Komm vorbei!"
+    "cta": "Weitere Infos bei uns im Shop!"
+  },
+  "tipp": {
+    "pose": "04_zeigen",
+    "kicker": "TIMMIS TIPP",
+    "bg": [
+      [
+        255,
+        244,
+        226
+      ],
+      [
+        255,
+        200,
+        130
+      ]
+    ],
+    "headline": "Älteres Smartphone?",
+    "sub": "Mit ein paar Handgriffen läuft es oft wieder rund.",
+    "punkte": [
+      "Updates installieren – sie schließen Sicherheitslücken",
+      "Speicher aufräumen: Fotos sichern, ungenutzte Apps löschen",
+      "Akku-Zustand in den Einstellungen prüfen"
+    ],
+    "cta": "Zeit für ein neues? Komm vorbei!"
   }
 }

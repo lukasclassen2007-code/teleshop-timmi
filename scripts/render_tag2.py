@@ -27,8 +27,8 @@ def slide_cover(c):
     glow(img, 800, 980, 420, AMBER, 0.55)
     lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ld = ImageDraw.Draw(lay)
-    retro_phone(ld, 70, 760, 330, "Hallo?")
-    retro_phone(ld, 300, 860, 260)
+    for (x, y, sz, txt) in c.get("phones", [(70, 760, 330, "Hallo?"), (300, 860, 260, None)]):
+        retro_phone(ld, x, y, sz, txt)
     img.alpha_composite(lay)
     place_cat(img, c["pose"], 560, cx=830, maxh=700, maxw=440)
     d = ImageDraw.Draw(img)
@@ -42,7 +42,8 @@ def slide_cover(c):
         d.text((48, y), ln, font=font("Medium", 34), fill=(225, 225, 225))
         y += 46
     cta(d, c["cta"], 1170, fill=AMBER, col=INK)
-    rp.draw_hint(d, "WISCHEN")
+    if c.get("hint", True):
+        rp.draw_hint(d, "WISCHEN")
     rp.footer(d)
     return img.convert("RGB")
 

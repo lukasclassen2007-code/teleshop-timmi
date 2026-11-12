@@ -57,13 +57,13 @@ def draw_hint(d, label="FUN-FACT"):
     chevron(d, x1 - 32, 67, 16, AMBER)
 
 
-def slide_fact(p, pose="03_idee"):
+def slide_fact(p, pose="03_idee", kicker="TIMMIS FUN-FACT"):
     img = Image.new("RGBA", (W, H), (20, 20, 22, 255))
     glow(img, 800, 1010, 360, AMBER, 0.85)
     d = ImageDraw.Draw(img)
     img.alpha_composite(logo(54), (48, 40))
     kf = font("Bold", 24)
-    kt = "TIMMIS FUN-FACT"
+    kt = kicker
     kw = d.textlength(kt, font=kf)
     d.rounded_rectangle((48, 118, 48 + kw + 36, 162), radius=22, fill=AMBER)
     d.text((66, 140), kt, font=kf, fill=INK, anchor="lm")
