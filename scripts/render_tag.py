@@ -39,7 +39,7 @@ def slide_topic(g):
     img.alpha_composite(logo(54), (48, 40))
     pill(d, 48, 118, g["kicker"])
     d.text((46, 176), g["typ"], font=fit(d, g["typ"], "Bold", 56, W - 96, 34), fill=INK)
-    y1 = card(img, d, 48, 280, 600, g["card_top"], g["card_big"], g["card_text"], {"glasfaser": TEAL, "gta": (190, 0, 140), "magenta": (226, 0, 116)}.get(g["id"], (120, 80, 220)))
+    y1 = card(img, d, 48, 280, 600, g["card_top"], g["card_big"], g["card_text"], {"glasfaser": TEAL, "gta": (190, 0, 140), "magenta": (226, 0, 116), "router": (20, 110, 210)}.get(g["id"], (120, 80, 220)))
     y = checks(d, y1 + 30, g["extras"])
     cta(d, g["cta"], y + 20)
     place_cat(img, g["pose"], y + 20 + 52)

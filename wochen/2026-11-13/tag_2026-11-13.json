@@ -1,0 +1,52 @@
+{
+  "cover": {
+    "kicker": "FREITAG · 13.11.",
+    "titel": ["Timmis", "Themen", "für heute"],
+    "punkte": [
+      ["Freitag, der 13.", "Pech? Nicht mit Timmi!"],
+      ["WLAN to go", "Internet überall, wo Strom ist"],
+      ["Perfekt für den Urlaub", "Ferienwohnung & Feriengäste"],
+      ["Wochenend-Tipp", "Schöne Strandfotos"]
+    ]
+  },
+  "funfact": {
+    "big": "Freitag, der 13.",
+    "text": "2026 gibt es ihn gleich dreimal: im Februar, im März und heute – mehr geht in einem Jahr nicht! Die Angst davor hat sogar einen Namen: Paraskavedekatriaphobie."
+  },
+  "router": {
+    "id": "router",
+    "kicker": "WLAN TO GO",
+    "pose": "10_router",
+    "bg": [[222, 240, 255], [110, 170, 240]],
+    "typ": "Internet überall, wo Strom ist!",
+    "card_top": "Einstecken und lossurfen",
+    "card_big": "5G-Router",
+    "card_text": "Dein eigenes WLAN mit unbegrenztem Datenvolumen. Nicht an eine Adresse gebunden – einfach mitnehmen!",
+    "extras": ["Kein Festnetz-Anschluss nötig", "Für Handy, Laptop, TV & Co."],
+    "cta": "Weitere Infos bei uns im Shop!"
+  },
+  "einsatz": {
+    "kicker": "PERFEKT FÜR",
+    "headline": "Urlaub an der Ostsee",
+    "faelle": [
+      ["Ferienwohnung", "Schnelles WLAN für deine Gäste – ganz ohne Festnetz-Anschluss."],
+      ["Feriengäste", "Dein eigenes WLAN reist mit – egal, wo du übernachtest."],
+      ["Garten & Camping", "Gartenhaus, Wohnmobil oder Wochenendhaus: überall online."]
+    ],
+    "schritte": ["Einstecken", "Verbinden", "Lossurfen"],
+    "cta": "Weitere Infos bei uns im Shop!"
+  },
+  "tipp": {
+    "pose": "13_strand",
+    "kicker": "TIMMIS WOCHENEND-TIPP",
+    "bg": [[255, 246, 222], [130, 200, 235]],
+    "headline": "Schöne Strandfotos!",
+    "sub": "Am Wochenende an die Ostsee? So werden deine Handy-Fotos richtig gut:",
+    "punkte": [
+      "Linse kurz sauber wischen",
+      "Raster einschalten – so bleibt der Horizont gerade",
+      "Goldene Stunde nutzen: kurz vor Sonnenuntergang"
+    ],
+    "cta": "Schönes Wochenende! Mo ab 9 Uhr sind wir da."
+  }
+}
