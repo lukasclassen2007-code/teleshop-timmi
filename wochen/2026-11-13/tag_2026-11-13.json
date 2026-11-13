@@ -16,8 +16,8 @@
         "Internet überall, wo Strom ist"
       ],
       [
-        "Immer dabei",
-        "Dein WLAN reist mit"
+        "eSIM",
+        "Einfach erklärt"
       ],
       [
         "Wochenend-Tipp",
@@ -55,30 +55,6 @@
     ],
     "cta": "Weitere Infos bei uns im Shop!"
   },
-  "einsatz": {
-    "kicker": "IMMER DABEI",
-    "headline": "Dein WLAN reist mit!",
-    "faelle": [
-      [
-        "Im Urlaub",
-        "Ferienhaus, Hotel oder Wochenende an der Ostsee – einfach einstecken."
-      ],
-      [
-        "Im Garten",
-        "Gartenhaus oder Terrasse: WLAN genau da, wo du es brauchst."
-      ],
-      [
-        "Unterwegs",
-        "Wohnmobil oder Camping: Hauptsache, eine Steckdose ist in der Nähe."
-      ]
-    ],
-    "schritte": [
-      "Einstecken",
-      "Verbinden",
-      "Lossurfen"
-    ],
-    "cta": "Weitere Infos bei uns im Shop!"
-  },
   "tipp": {
     "pose": "13_strand",
     "kicker": "TIMMIS WOCHENEND-TIPP",
@@ -102,5 +78,46 @@
       "Golden Hour nutzen: kurz vor Sonnenuntergang"
     ],
     "cta": "Schönes Wochenende! Mo ab 9 Uhr sind wir da."
+  },
+  "esim": {
+    "kicker": "ESIM EINFACH ERKLÄRT",
+    "headline": "Was ist eine eSIM?",
+    "bg": [
+      [
+        244,
+        236,
+        255
+      ],
+      [
+        175,
+        150,
+        240
+      ]
+    ],
+    "col": [
+      110,
+      70,
+      210
+    ],
+    "faelle": [
+      [
+        "Fest eingebaut",
+        "Die SIM steckt schon im Handy – kein Kärtchen, kein Einlegen."
+      ],
+      [
+        "Schnell startklar",
+        "Ein QR-Code genügt, und dein Tarif ist aktiviert."
+      ],
+      [
+        "Zwei Nummern",
+        "Privat und dienstlich auf einem Handy? Mit eSIM kein Problem."
+      ]
+    ],
+    "schritte": [
+      "Vorbeikommen",
+      "Einrichten",
+      "Lossurfen"
+    ],
+    "cta": "Wir richten sie dir ein – komm vorbei!"
   }
 }

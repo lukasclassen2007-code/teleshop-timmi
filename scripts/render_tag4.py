@@ -51,7 +51,9 @@ def slide_router(g):
 
 
 def slide_einsatz(e):
-    img = gradient(W, H, (230, 244, 255), (120, 180, 240)).convert("RGBA")
+    bg = e.get("bg", [[230, 244, 255], [120, 180, 240]])
+    col = tuple(e.get("col", BLUE))
+    img = gradient(W, H, tuple(bg[0]), tuple(bg[1])).convert("RGBA")
     glow(img, 540, 1000, 420, (255, 255, 255), 0.5)
     d = ImageDraw.Draw(img)
     img.alpha_composite(logo(54), (48, 40))
@@ -60,7 +62,7 @@ def slide_einsatz(e):
     y = 300
     for i, (t, txt) in enumerate(e["faelle"]):
         d.rounded_rectangle((48, y, W - 48, y + 205), radius=30, fill=WHITE)
-        d.ellipse((78, y + 52, 178, y + 152), fill=BLUE)
+        d.ellipse((78, y + 52, 178, y + 152), fill=col)
         d.text((128, y + 102), str(i + 1), font=font("Bold", 56), fill=WHITE, anchor="mm")
         d.text((210, y + 30), t, font=font("Bold", 44), fill=INK)
         yy = y + 92
@@ -74,7 +76,7 @@ def slide_einsatz(e):
     for i, s in enumerate(e["schritte"]):
         x = xs[i]
         d.rounded_rectangle((x, y, x + 300, y + 90), radius=45, fill=INK)
-        d.text((x + 150, y + 45), s, font=font("Bold", 36), fill=AMBER, anchor="mm")
+        d.text((x + 150, y + 45), s, font=fit(d, s, "Bold", 36, 260, 24), fill=AMBER, anchor="mm")
         if i < 2:
             cx = x + 320
             d.polygon([(cx - 8, y + 30), (cx + 10, y + 45), (cx - 8, y + 60)], fill=INK)
@@ -90,6 +92,6 @@ if __name__ == "__main__":
     rt.slide_cover(data["cover"]).save(f"{out}/1_themen.jpg", quality=92)
     rp.slide_fact({"funfact": data["funfact"]}, pose="05_warnung", kicker="TIMMIS FUN-FACT").save(f"{out}/2_funfact.jpg", quality=92)
     slide_router(data["router"]).save(f"{out}/3_5g_router.jpg", quality=92)
-    slide_einsatz(data["einsatz"]).save(f"{out}/4_perfekt_fuer.jpg", quality=92)
+    slide_einsatz(data["esim"]).save(f"{out}/4_esim.jpg", quality=92)
     r2.slide_tip(data["tipp"]).save(f"{out}/5_wochenende.jpg", quality=92)
     print("ok")
