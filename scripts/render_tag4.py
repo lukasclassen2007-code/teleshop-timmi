@@ -60,6 +60,11 @@ def slide_einsatz(e):
     pill(d, 48, 118, e["kicker"])
     d.text((46, 176), e["headline"], font=fit(d, e["headline"], "Bold", 84, W - 96, 40), fill=INK)
     y = 300
+    if e.get("sub"):
+        for ln in wrap(d, e["sub"], font("Medium", 34), W - 100):
+            d.text((48, y - 10), ln, font=font("Medium", 34), fill=(50, 50, 60))
+            y += 46
+        y += 20
     for i, (t, txt) in enumerate(e["faelle"]):
         d.rounded_rectangle((48, y, W - 48, y + 205), radius=30, fill=WHITE)
         d.ellipse((78, y + 52, 178, y + 152), fill=col)
@@ -72,6 +77,10 @@ def slide_einsatz(e):
         y += 235
     # Drei Schritte
     y += 25
+    if not e["schritte"]:
+        cta(d, e["cta"], y)
+        rp.footer(ImageDraw.Draw(img))
+        return img.convert("RGB")
     xs = (48, 48 + 340, 48 + 680)
     for i, s in enumerate(e["schritte"]):
         x = xs[i]
