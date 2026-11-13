@@ -87,7 +87,7 @@ def story2():
             img.alpha_composite(lay)
         a = ease((t - 2.0) / 0.5)
         layer(img, a, lambda dd: pill(dd, W / 2, 1050, "Unbegrenztes Datenvolumen", 40, fill=INK, col=AMBER))
-        for i, (yy, txt) in enumerate(((1150, "Für Eigentümer von Ferienimmobilien"), (1240, "Für Feriengäste"))):
+        for i, (yy, txt) in enumerate(((1150, "Für Ferienvermieter"), (1240, "Für Feriengäste"))):
             a = ease((t - 2.6 - i * 0.3) / 0.4)
             layer(img, a, lambda dd, yy=yy, txt=txt: pill(dd, W / 2, yy, txt, 32, fill=WHITE, col=INK))
         rs.put_cat(img, c, 880, 1570, 3.2, t, "pop")
