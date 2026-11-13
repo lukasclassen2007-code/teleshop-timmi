@@ -69,7 +69,7 @@ def story1():
 
 def story2():
     bg = gradient(W, H, (226, 242, 255), (100, 160, 235)).convert("RGBA")
-    c = cat("04_zeigen", 330, 330)
+    c = cat("04_zeigen", 260, 260)
 
     def frame(t):
         img = bg.copy()
@@ -87,10 +87,12 @@ def story2():
             img.alpha_composite(lay)
         a = ease((t - 2.0) / 0.5)
         layer(img, a, lambda dd: pill(dd, W / 2, 1050, "Unbegrenztes Datenvolumen", 40, fill=INK, col=AMBER))
-        for i, (yy, txt) in enumerate(((1150, "Für Ferienvermieter"), (1240, "Für Feriengäste"))):
-            a = ease((t - 2.6 - i * 0.3) / 0.4)
-            layer(img, a, lambda dd, yy=yy, txt=txt: pill(dd, W / 2, yy, txt, 32, fill=WHITE, col=INK))
-        rs.put_cat(img, c, 880, 1570, 3.2, t, "pop")
+        for i, (cx, txt) in enumerate(((240, "Urlaub"), (540, "Garten"), (840, "Unterwegs"))):
+            a = ease((t - 2.6 - i * 0.25) / 0.4)
+            layer(img, a, lambda dd, cx=cx, txt=txt: pill(dd, cx, 1160, txt, 36, fill=WHITE, col=INK))
+        a = ease((t - 3.4) / 0.5)
+        layer(img, a, lambda dd: dd.text((W / 2, 1250), "Einfach mitnehmen!", font=font("Bold", 52), fill=INK, anchor="mt"))
+        rs.put_cat(img, c, W // 2, 1580, 3.2, t, "pop")
         cta_bottom(img, t, "Weitere Infos bei uns im Shop!", t0=3.8, fill=INK, col=AMBER)
         return img
     return frame
