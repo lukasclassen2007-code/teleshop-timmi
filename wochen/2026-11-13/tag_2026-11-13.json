@@ -99,22 +99,24 @@
       70,
       210
     ],
-    "sub": "Die eSIM ist eine digitale SIM-Karte. Statt einer Plastikkarte steckt ein kleiner Chip fest im Handy – dein Tarif wird einfach daraufgeladen. So funktioniert's:",
+    "sub": "Eine digitale SIM-Karte – fest im Handy eingebaut.",
     "faelle": [
       [
         "Chip statt Karte",
-        "Die meisten neuen Handys haben den SIM-Chip schon ab Werk fest eingebaut."
+        "Steckt in den meisten neuen Handys schon drin."
       ],
       [
         "Tarif per QR-Code",
-        "Du bekommst einen QR-Code. Einmal scannen – und dein Tarif landet auf dem Chip."
+        "Einmal scannen – Tarif ist drauf."
       ],
       [
         "Fertig!",
-        "Telefonieren und surfen wie gewohnt – ganz ohne Kärtchen und Einlegen."
+        "Telefonieren und surfen wie gewohnt."
       ]
     ],
     "schritte": [],
-    "cta": "Wir richten sie dir ein – komm vorbei!"
+    "cta": "Wir richten sie dir ein – komm vorbei!",
+    "pose": "02_handy",
+    "x1": 700
   }
 }

@@ -65,20 +65,26 @@ def slide_einsatz(e):
             d.text((48, y - 10), ln, font=font("Medium", 34), fill=(50, 50, 60))
             y += 46
         y += 20
+    x1 = e.get("x1", W - 48)
     for i, (t, txt) in enumerate(e["faelle"]):
-        d.rounded_rectangle((48, y, W - 48, y + 205), radius=30, fill=WHITE)
-        d.ellipse((78, y + 52, 178, y + 152), fill=col)
-        d.text((128, y + 102), str(i + 1), font=font("Bold", 56), fill=WHITE, anchor="mm")
+        lines = wrap(d, txt, font("Medium", 30), x1 - 210 - 40)
+        ch = max(170, 92 + 40 * len(lines) + 34)
+        d.rounded_rectangle((48, y, x1, y + ch), radius=30, fill=WHITE)
+        d.ellipse((78, y + ch / 2 - 50, 178, y + ch / 2 + 50), fill=col)
+        d.text((128, y + ch / 2), str(i + 1), font=font("Bold", 56), fill=WHITE, anchor="mm")
         d.text((210, y + 30), t, font=font("Bold", 44), fill=INK)
         yy = y + 92
-        for ln in wrap(d, txt, font("Medium", 30), W - 48 - 210 - 40):
+        for ln in lines:
             d.text((210, yy), ln, font=font("Medium", 30), fill=(60, 60, 70))
             yy += 40
-        y += 235
+        y += ch + 25
     # Drei Schritte
     y += 25
     if not e["schritte"]:
         cta(d, e["cta"], y)
+        if e.get("pose"):
+            k = cat(e["pose"], 340, 620)
+            img.alpha_composite(k, (885 - k.width // 2, H - FOOT - 20 - k.height))
         rp.footer(ImageDraw.Draw(img))
         return img.convert("RGB")
     xs = (48, 48 + 340, 48 + 680)
