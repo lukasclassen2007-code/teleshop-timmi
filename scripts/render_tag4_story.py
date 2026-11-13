@@ -129,7 +129,7 @@ def story3():
         a = ease((t - 2.4) / 0.5)
         layer(img, a, lambda dd: pill(dd, W / 2, 790, "Tipp: Raster an – Horizont gerade!", 38, fill=INK, col=AMBER))
         rs.put_cat(img, c, 330, 1570, 1.2, t, "pop")
-        cta_bottom(img, t, "Mo ab 9 Uhr wieder für dich da!", t0=3.6, fill=INK, col=AMBER)
+        cta_bottom(img, t, "Heute bis 17 Uhr für euch da!", t0=3.6, fill=INK, col=AMBER)
         return img
     return frame
 
