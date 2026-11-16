@@ -83,7 +83,7 @@ def slide_einsatz(e):
     if not e["schritte"]:
         cta(d, e["cta"], y)
         if e.get("pose"):
-            k = cat(e["pose"], 340, 620)
+            k = cat(e["pose"], e.get("cat_w", 340), 620)
             img.alpha_composite(k, (885 - k.width // 2, H - FOOT - 20 - k.height))
         rp.footer(ImageDraw.Draw(img))
         return img.convert("RGB")

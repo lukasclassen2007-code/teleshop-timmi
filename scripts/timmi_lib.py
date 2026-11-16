@@ -202,7 +202,7 @@ DECO = {
                 ("pill", 0.8, 0.38, 0.065, {"text": "Internet"}), ("pill", 0.76, 0.56, 0.065, {"text": "Alle Netze"}),
                 ("sparkle", 0.93, 0.08, 0.04, {})],
     "wifi":    [("wifi", 0.2, 0.2, 0.2, {}), ("wifi", 0.86, 0.3, 0.1, {}), ("sparkle", 0.9, 0.1, 0.04, {}),
-                ("pill", 0.82, 0.55, 0.06, {"text": "frei stellen"})],
+                ("pill", 0.82, 0.55, 0.06, {"text": "Unbegrenzt"})],
 }
 
 

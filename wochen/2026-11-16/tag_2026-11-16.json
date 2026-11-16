@@ -1,0 +1,121 @@
+{
+  "cover": {
+    "kicker": "MOIN! · MONTAG 16.11.",
+    "titel": [
+      "Timmis",
+      "Themen",
+      "für heute"
+    ],
+    "punkte": [
+      [
+        "Fun-Fact",
+        "3 Stunden am Tag?"
+      ],
+      [
+        "Handy-Herbstputz",
+        "Mehr Platz auf dem Handy"
+      ],
+      [
+        "Fokus-Modus",
+        "Mehr Ruhe im Alltag"
+      ],
+      [
+        "Timmis Tipp",
+        "Benachrichtigungen ausmisten"
+      ]
+    ]
+  },
+  "funfact": {
+    "big": "180 Minuten",
+    "text": "So lange nutzen wir in Deutschland im Schnitt jeden Tag unser Smartphone. Telefoniert wird davon aber nur 26 Minuten!"
+  },
+  "putz": {
+    "pose": "07_daten",
+    "kicker": "HANDY-HERBSTPUTZ",
+    "bg": [
+      [
+        232,
+        248,
+        238
+      ],
+      [
+        120,
+        205,
+        160
+      ]
+    ],
+    "headline": "Handy voll?",
+    "sub": "Mehr Platz und mehr Tempo – in zehn Minuten aufgeräumt:",
+    "punkte": [
+      "Apps löschen, die du nicht mehr nutzt",
+      "Fotos und Videos sichern, dann vom Handy löschen",
+      "Bilder und Videos aus Chats aufräumen"
+    ],
+    "cta": "Weitere Infos bei uns im Shop!"
+  },
+  "fokus": {
+    "kicker": "FOKUS-MODUS",
+    "headline": "Mehr Ruhe im Alltag",
+    "bg": [
+      [
+        232,
+        238,
+        255
+      ],
+      [
+        140,
+        160,
+        235
+      ]
+    ],
+    "col": [
+      70,
+      90,
+      200
+    ],
+    "sub": "Dein Handy kann auch mal leise sein:",
+    "faelle": [
+      [
+        "Fokus-Modus",
+        "Nur wichtige Anrufe und Nachrichten kommen durch."
+      ],
+      [
+        "Bildschirmzeit",
+        "Zeigt dir, wie lange du welche App nutzt."
+      ],
+      [
+        "Ruhezeit",
+        "Abends pausieren Apps automatisch."
+      ]
+    ],
+    "schritte": [],
+    "x1": 700,
+    "pose": "12_chillen",
+    "cta": "Hilfe beim Einrichten? Komm vorbei!",
+    "cat_w": 460
+  },
+  "tipp": {
+    "pose": "04_zeigen",
+    "kicker": "TIMMIS TIPP",
+    "bg": [
+      [
+        255,
+        244,
+        226
+      ],
+      [
+        255,
+        200,
+        130
+      ]
+    ],
+    "headline": "Benachrichtigungen ausmisten!",
+    "sub": "Ständiges Piepen nervt? So bleibt nur das Wichtige:",
+    "punkte": [
+      "In den Einstellungen „Mitteilungen“ öffnen",
+      "Bei unwichtigen Apps ausschalten",
+      "Anrufe, Familie und Termine bleiben an"
+    ],
+    "cta": "Schöne Woche! Mo–Fr 9–17 Uhr für dich da."
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {"type": "scene", "theme": "intro", "pose": "01_winken", "layout": "center", "dur": 4.5,
+   "kicker": "MOIN, NEUE WOCHE!", "headline": "Timmi ist für dich da", "sub": "Mo–Fr 9–17 Uhr · Poststraße 34"},
+  {"type": "funfact", "pose": "02_handy", "dur": 6, "big": "180 Minuten",
+   "text": "nutzen wir täglich unser Smartphone – telefoniert wird davon nur 26 Minuten."},
+  {"type": "insta", "pose": "04_zeigen", "dur": 7,
+   "kicker": "FOLGE TIMMI", "headline": "Timmi auf Instagram", "sub": "Tipps, Fun-Facts & Aktionen"},
+  {"type": "scene", "theme": "wifi", "pose": "10_router", "layout": "center", "dur": 4.5,
+   "kicker": "WLAN TO GO", "headline": "Internet überall, wo Strom ist", "sub": "5G-Router mit unbegrenztem Datenvolumen"},
+  {"type": "funfact", "pose": "03_idee", "dur": 6, "big": "Nokia 3310", "glow": [110, 170, 255],
+   "text": "kam im Jahr 2000 auf den Markt und wurde über 120 Millionen Mal verkauft."},
+  {"type": "scene", "theme": "cold", "pose": "14_herbst", "layout": "center", "dur": 4.5,
+   "kicker": "WINTER-TIPP", "headline": "Kälte frisst Akku!", "sub": "Handy in die Innentasche"},
+  {"type": "google", "pose": "18_danke", "dur": 7,
+   "kicker": "DANKE!", "headline": "Zufrieden mit uns?", "sub": "Timmi freut sich über deine Bewertung"}
+]
