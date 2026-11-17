@@ -1,0 +1,96 @@
+{
+  "cover": {
+    "kicker": "DIENSTAG · 17.11.",
+    "titel": [
+      "Timmis",
+      "Themen",
+      "für heute"
+    ],
+    "punkte": [
+      [
+        "Noch 37 Tage",
+        "bis Weihnachten!"
+      ],
+      [
+        "Fun-Fact",
+        "Die erste SMS der Welt"
+      ],
+      [
+        "Geschenk-Ideen",
+        "Rund ums Handy"
+      ],
+      [
+        "Timmis Tipp",
+        "Handy für Oma & Opa"
+      ]
+    ]
+  },
+  "funfact": {
+    "big": "„Merry Christmas“",
+    "text": "So lautete die erste SMS der Welt – verschickt am 3. Dezember 1992 von einem Computer an ein Handy."
+  },
+  "ideen": {
+    "kicker": "GESCHENK-IDEEN",
+    "headline": "Was liegt unterm Baum?",
+    "bg": [
+      [
+        255,
+        236,
+        236
+      ],
+      [
+        235,
+        120,
+        120
+      ]
+    ],
+    "col": [
+      200,
+      40,
+      50
+    ],
+    "sub": "Timmis Ideen rund ums Handy:",
+    "faelle": [
+      [
+        "Smartphone",
+        "Der Klassiker – für Groß und Klein."
+      ],
+      [
+        "Tablet",
+        "Für Filmabende, Spiele und Videoanrufe."
+      ],
+      [
+        "Smartwatch & Co.",
+        "Kopfhörer, Uhr & Zubehör – kleine Geschenke, große Freude."
+      ]
+    ],
+    "schritte": [],
+    "x1": 700,
+    "pose": "16_geschenk",
+    "cta": "Weitere Infos bei uns im Shop!"
+  },
+  "tipp": {
+    "pose": "15_advent",
+    "kicker": "TIMMIS TIPP",
+    "bg": [
+      [
+        255,
+        244,
+        226
+      ],
+      [
+        255,
+        200,
+        130
+      ]
+    ],
+    "headline": "Handy für Oma & Opa?",
+    "sub": "Vor dem Verschenken einrichten – dann klappt's sofort:",
+    "punkte": [
+      "Schrift und Symbole größer stellen",
+      "Wichtige Nummern als Favoriten speichern",
+      "Notfallkontakt hinterlegen"
+    ],
+    "cta": "Wir helfen beim Einrichten – komm vorbei!"
+  }
+}
