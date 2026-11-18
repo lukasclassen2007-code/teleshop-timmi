@@ -1,0 +1,61 @@
+{
+  "cover": {
+    "kicker": "MITTWOCH · 18.11.",
+    "titel": ["Timmis", "Themen", "für heute"],
+    "punkte": [
+      ["KI im Alltag", "Vorteile & Risiken"],
+      ["KI-Betrug", "So schützt du dich"],
+      ["Fun-Fact", "Wie alt ist KI?"],
+      ["Black Week", "Läuft bis 15.12."],
+      ["GTA VI", "Erscheint morgen!"]
+    ]
+  },
+  "ki": {
+    "kicker": "KÜNSTLICHE INTELLIGENZ",
+    "headline": "KI im Alltag",
+    "sub": "Sie steckt längst in vielen Handys und Apps. Was bringt sie – und worauf solltest du achten?",
+    "pro": ["Fotos verbessern und Texte übersetzen", "Schnelle Hilfe bei Alltagsfragen", "Spart Zeit bei Routineaufgaben"],
+    "contra": ["Antworten können falsch sein", "Gefälschte Bilder und Stimmen", "Persönliche Daten können ungewollt preisgegeben werden"]
+  },
+  "tipp": {
+    "pose": "06_detektiv",
+    "kicker": "TIMMIS TIPP",
+    "bg": [[240, 232, 255], [170, 150, 245]],
+    "headline": "Vorsicht vor KI-Betrug!",
+    "sub": "Betrüger können Stimmen mit KI täuschend echt nachmachen – etwa am Telefon. So schützt du dich:",
+    "punkte": [
+      "Familien-Codewort vereinbaren",
+      "Auflegen und unter der bekannten Nummer zurückrufen",
+      "Nie Geld oder Codes am Telefon herausgeben"
+    ],
+    "cta": "Fragen dazu? Komm vorbei!"
+  },
+  "funfact": {
+    "big": "Über 70 Jahre",
+    "text": "So alt ist der Begriff „Künstliche Intelligenz“ schon: Der US-Forscher John McCarthy prägte ihn 1955 für eine Konferenz im Jahr 1956."
+  },
+  "bw": {
+    "id": "bw",
+    "kicker": "BLACK WEEK",
+    "pose": "16_geschenk",
+    "bg": [[255, 240, 214], [255, 170, 60]],
+    "typ": "Die Black Week läuft!",
+    "card_top": "Aktion bis 15.12.",
+    "card_big": "Black Week",
+    "card_text": "Starke Angebote für Mobilfunk und Internet – mit persönlicher Beratung und ganz ohne Hektik.",
+    "extras": ["Mobilfunk & Internet", "Persönliche Beratung vor Ort"],
+    "cta": "Weitere Infos bei uns im Shop!"
+  },
+  "gta": {
+    "id": "gta",
+    "kicker": "GAMING",
+    "pose": "08_speed",
+    "bg": [[248, 226, 255], [200, 120, 240]],
+    "typ": "GTA VI erscheint morgen!",
+    "card_top": "Donnerstag, 19.11.",
+    "card_big": "Bereit zum Zocken?",
+    "card_text": "Das Warten hat ein Ende. Mit schnellem Internet bist du direkt dabei.",
+    "extras": ["Stabil beim Online-Zocken", "Schnelles Internet für zu Hause"],
+    "cta": "Weitere Infos bei uns im Shop!"
+  }
+}
