@@ -1,0 +1,94 @@
+{
+  "cover": {
+    "kicker": "DONNERSTAG · 19.11.",
+    "titel": [
+      "Timmis",
+      "Themen",
+      "für heute"
+    ],
+    "punkte": [
+      [
+        "Throwback Thursday",
+        "Erinnerst du dich?"
+      ],
+      [
+        "Fun-Fact",
+        "Der berühmteste Klingelton"
+      ],
+      [
+        "Timmis Tipp",
+        "Wer ruft da an?"
+      ]
+    ]
+  },
+  "retro": {
+    "kicker": "THROWBACK THURSDAY",
+    "headline": "Erinnerst du dich?",
+    "bg": [
+      [
+        52,
+        46,
+        70
+      ],
+      [
+        20,
+        18,
+        28
+      ]
+    ],
+    "col": [
+      255,
+      166,
+      43
+    ],
+    "sub": "So war das damals mit dem Tastenhandy:",
+    "faelle": [
+      [
+        "Snake",
+        "Das Kultspiel Ende der 90er: Taste drücken und los!"
+      ],
+      [
+        "SMS tippen",
+        "Für ein „f“ dreimal auf die 3 drücken."
+      ],
+      [
+        "Klingeltöne",
+        "Piepsige Melodien – jeder Anruf ein kleines Konzert."
+      ]
+    ],
+    "schritte": [],
+    "x1": 700,
+    "pose": "09_empfang",
+    "cat_w": 360,
+    "dark": true,
+    "cta": "Komm vorbei – Timmi freut sich!"
+  },
+  "funfact": {
+    "big": "1902",
+    "text": "Der berühmte Nokia-Klingelton ist über 120 Jahre alt: Er stammt aus „Gran Vals“, einem Gitarrenstück des Spaniers Francisco Tárrega."
+  },
+  "tipp": {
+    "pose": "02_handy",
+    "kicker": "TIMMIS TIPP",
+    "bg": [
+      [
+        255,
+        244,
+        226
+      ],
+      [
+        255,
+        200,
+        130
+      ]
+    ],
+    "headline": "Wer ruft da an?",
+    "sub": "Gib wichtigen Kontakten einen eigenen Klingelton – dann weißt du es, ohne hinzuschauen:",
+    "punkte": [
+      "Kontakt öffnen und auf „Bearbeiten“ tippen",
+      "Klingelton auswählen und speichern",
+      "Familie & Freunde erkennst du sofort am Ton"
+    ],
+    "cta": "Hilfe beim Einstellen? Komm vorbei!"
+  }
+}

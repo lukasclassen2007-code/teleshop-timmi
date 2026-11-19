@@ -58,11 +58,12 @@ def slide_einsatz(e):
     d = ImageDraw.Draw(img)
     img.alpha_composite(logo(54), (48, 40))
     pill(d, 48, 118, e["kicker"])
-    d.text((46, 176), e["headline"], font=fit(d, e["headline"], "Bold", 84, W - 96, 40), fill=INK)
+    dark = e.get("dark", False)
+    d.text((46, 176), e["headline"], font=fit(d, e["headline"], "Bold", 84, W - 96, 40), fill=WHITE if dark else INK)
     y = 300
     if e.get("sub"):
         for ln in wrap(d, e["sub"], font("Medium", 34), W - 100):
-            d.text((48, y - 10), ln, font=font("Medium", 34), fill=(50, 50, 60))
+            d.text((48, y - 10), ln, font=font("Medium", 34), fill=(220, 220, 228) if dark else (50, 50, 60))
             y += 46
         y += 20
     x1 = e.get("x1", W - 48)
@@ -81,7 +82,10 @@ def slide_einsatz(e):
     # Drei Schritte
     y += 25
     if not e["schritte"]:
-        cta(d, e["cta"], y)
+        if dark:
+            cta(d, e["cta"], y, fill=AMBER, col=INK)
+        else:
+            cta(d, e["cta"], y)
         if e.get("pose"):
             k = cat(e["pose"], e.get("cat_w", 340), 620)
             img.alpha_composite(k, (885 - k.width // 2, H - FOOT - 20 - k.height))
