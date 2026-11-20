@@ -1,0 +1,42 @@
+{
+  "cover": {
+    "kicker": "FREITAG · 20.11.",
+    "titel": ["Timmis", "Themen", "für heute"],
+    "punkte": [
+      ["Wochenend-Modus", "Lädt … 100 %"],
+      ["Fun-Fact", "Ein Emoji als Wort des Jahres?"],
+      ["Timmis Tipp", "Lustige Schnappschüsse"]
+    ]
+  },
+  "checkliste": {
+    "pose": "12_chillen",
+    "kicker": "WOCHENEND-MODUS",
+    "bg": [[255, 246, 214], [255, 190, 90]],
+    "headline": "Wochenend-Modus: AN!",
+    "sub": "Timmis Checkliste für ein entspanntes Wochenende:",
+    "punkte": [
+      "Akku auf 100 % – für alle Schnappschüsse",
+      "Lieblingsserie auf die Liste",
+      "Beim Frühstück: Handy auf „Nicht stören“",
+      "Ab an die Ostsee – frische Luft tanken!"
+    ],
+    "cta": "Schönes Wochenende! Heute bis 17 Uhr da."
+  },
+  "funfact": {
+    "big": "2015",
+    "text": "wählte das Oxford-Wörterbuch erstmals gar kein Wort zum Wort des Jahres – sondern ein Emoji: das lachende Gesicht mit Freudentränen!"
+  },
+  "tipp": {
+    "pose": "13_strand",
+    "kicker": "TIMMIS TIPP",
+    "bg": [[226, 244, 255], [120, 190, 240]],
+    "headline": "Lustige Schnappschüsse!",
+    "sub": "Hund springt, Welle spritzt, alle lachen? Mit Serienbild erwischst du den perfekten Moment:",
+    "punkte": [
+      "Kamera öffnen und Serienbild nutzen",
+      "Bei vielen Handys: Auslöser gedrückt halten oder zur Seite ziehen",
+      "Das beste Foto behalten, den Rest löschen"
+    ],
+    "cta": "Weitere Infos bei uns im Shop!"
+  }
+}
