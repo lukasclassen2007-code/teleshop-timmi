@@ -18,6 +18,8 @@ THEMES = {
     "cold":    ((234, 247, 255), (160, 212, 245)),
     "wifi":    ((222, 248, 238), (128, 222, 186)),
     "cta":     ((255, 236, 200), (255, 183, 77)),
+    "winter":  ((234, 247, 255), (160, 212, 245)),
+    "xmas":    ((255, 236, 236), (232, 120, 120)),
 }
 
 
@@ -186,6 +188,10 @@ def _bricks(d, x0, y0, x1, y1, s, col):
 # Deko-Definition je Thema: (art, x-Anteil, y-Anteil, Größe-Anteil, Parameter)
 # x/y-Anteile beziehen sich auf die Bühne (Bereich zwischen Text und Fußleiste)
 DECO = {
+    "winter":  [("snow", 0.12, 0.14, 0.07, {}), ("snow", 0.86, 0.1, 0.05, {}), ("snow", 0.93, 0.55, 0.06, {}),
+                ("snow", 0.07, 0.48, 0.045, {})],
+    "xmas":    [("snow", 0.1, 0.16, 0.06, {}), ("snow", 0.9, 0.12, 0.05, {}), ("snow", 0.92, 0.5, 0.06, {}),
+                ("snow", 0.08, 0.45, 0.045, {})],
     "intro":   [("waves", 0, 0.86, 0.05, {}), ("bubble", 0.78, 0.18, 0.13, {"text": "Moin!"}),
                 ("sparkle", 0.12, 0.3, 0.05, {}), ("sparkle", 0.88, 0.48, 0.035, {})],
     "warn":    [("warn", 0.13, 0.25, 0.11, {}), ("bubble", 0.85, 0.2, 0.11, {"text": "!"}),

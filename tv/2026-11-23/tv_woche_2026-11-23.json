@@ -1,7 +1,7 @@
 [
  {
   "type": "scene",
-  "theme": "cold",
+  "theme": "winter",
   "pose": "14_herbst",
   "layout": "center",
   "dur": 4.5,
@@ -11,15 +11,15 @@
  },
  {
   "type": "funfact",
-  "pose": "02_handy",
+  "pose": "03_idee",
   "dur": 6,
-  "big": "106 Millionen",
+  "big": "1994",
   "glow": [
    110,
    170,
    255
   ],
-  "text": "aktive SIM-Karten gab es Ende 2025 in Deutschland – rund 1,3 pro Einwohner."
+  "text": "wurde der QR-Code erfunden – eigentlich, um Autoteile in Fabriken schneller zu erfassen."
  },
  {
   "type": "insta",
@@ -31,13 +31,13 @@
  },
  {
   "type": "scene",
-  "theme": "cold",
-  "pose": "11_akku",
+  "theme": "xmas",
+  "pose": "16_geschenk",
   "layout": "center",
   "dur": 4.5,
-  "kicker": "WINTER-TIPP",
-  "headline": "Powerbank einpacken!",
-  "sub": "Bei Kälte leert sich der Akku schneller"
+  "kicker": "WEIHNACHTSZEIT",
+  "headline": "Starke Angebote im Shop!",
+  "sub": "Handy, Tarif & Internet – frag Timmi"
  },
  {
   "type": "scene",
@@ -51,10 +51,10 @@
  },
  {
   "type": "funfact",
-  "pose": "15_advent",
+  "pose": "02_handy",
   "dur": 6,
-  "big": "1992",
-  "text": "wurde die erste SMS der Welt verschickt – ihr Text: „Merry Christmas“!"
+  "big": "1997",
+  "text": "entstand das erste per Handy geteilte Foto: Ein Vater schickte ein Bild seiner neugeborenen Tochter an Freunde."
  },
  {
   "type": "google",
