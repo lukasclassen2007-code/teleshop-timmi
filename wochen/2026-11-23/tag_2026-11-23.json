@@ -1,0 +1,45 @@
+{
+  "cover": {
+    "kicker": "MONTAG · 23.11.",
+    "titel": ["Timmis", "Themen", "für heute"],
+    "punkte": [
+      ["Black Friday kommt", "Fake-Shops erkennen"],
+      ["Fun-Fact", "Der erste Online-Kauf"],
+      ["Timmis Tipp", "Sicher bezahlen"]
+    ]
+  },
+  "fake": {
+    "kicker": "BLACK FRIDAY · 27.11.",
+    "headline": "Fake-Shop oder echt?",
+    "bg": [[255, 236, 236], [240, 130, 130]],
+    "col": [200, 40, 50],
+    "sub": "Diese Warnzeichen solltest du kennen:",
+    "faelle": [
+      ["Zu billig?", "Riesige Rabatte auf Topmarken sind oft eine Falle."],
+      ["Kein Impressum", "Fehlt die Adresse vom Anbieter, lieber Finger weg."],
+      ["Nur Vorkasse", "Am Ende kein anderer Weg als Überweisung? Vorsicht!"]
+    ],
+    "schritte": [],
+    "x1": 700,
+    "pose": "06_detektiv",
+    "cat_w": 360,
+    "cta": "Unsicher? Frag Timmi im Shop!"
+  },
+  "funfact": {
+    "big": "1994",
+    "text": "gilt als Jahr des ersten dokumentierten Online-Kaufs mit verschlüsselter Bezahlung: eine Musik-CD von Sting!"
+  },
+  "tipp": {
+    "pose": "05_warnung",
+    "kicker": "TIMMIS TIPP",
+    "bg": [[232, 248, 238], [120, 205, 160]],
+    "headline": "Sicher bezahlen!",
+    "sub": "So kaufst du am Black Friday entspannt online ein:",
+    "punkte": [
+      "Bezahlart mit Käuferschutz wählen",
+      "Nie per Überweisung an unbekannte Shops",
+      "Bewertungen auch auf anderen Seiten prüfen"
+    ],
+    "cta": "Lieber persönlich? Komm vorbei!"
+  }
+}
