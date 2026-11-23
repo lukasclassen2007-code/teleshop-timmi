@@ -1,0 +1,67 @@
+[
+ {
+  "type": "scene",
+  "theme": "cold",
+  "pose": "14_herbst",
+  "layout": "center",
+  "dur": 4.5,
+  "kicker": "MOIN, WINTER!",
+  "headline": "Timmi ist für dich da",
+  "sub": "Mo–Fr 9–17 Uhr · Poststraße 34"
+ },
+ {
+  "type": "funfact",
+  "pose": "02_handy",
+  "dur": 6,
+  "big": "106 Millionen",
+  "glow": [
+   110,
+   170,
+   255
+  ],
+  "text": "aktive SIM-Karten gab es Ende 2025 in Deutschland – rund 1,3 pro Einwohner."
+ },
+ {
+  "type": "insta",
+  "pose": "04_zeigen",
+  "dur": 7,
+  "kicker": "FOLGE TIMMI",
+  "headline": "Timmi auf Instagram",
+  "sub": "Tipps, Fun-Facts & Aktionen"
+ },
+ {
+  "type": "scene",
+  "theme": "cold",
+  "pose": "11_akku",
+  "layout": "center",
+  "dur": 4.5,
+  "kicker": "WINTER-TIPP",
+  "headline": "Powerbank einpacken!",
+  "sub": "Bei Kälte leert sich der Akku schneller"
+ },
+ {
+  "type": "scene",
+  "theme": "intro",
+  "pose": "01_winken",
+  "layout": "center",
+  "dur": 4.5,
+  "kicker": "5 ANBIETER, 1 SHOP",
+  "headline": "Wir vergleichen für dich",
+  "sub": "Vodafone · Telekom · o2 · congstar · otelo"
+ },
+ {
+  "type": "funfact",
+  "pose": "15_advent",
+  "dur": 6,
+  "big": "1992",
+  "text": "wurde die erste SMS der Welt verschickt – ihr Text: „Merry Christmas“!"
+ },
+ {
+  "type": "google",
+  "pose": "18_danke",
+  "dur": 7,
+  "kicker": "DANKE!",
+  "headline": "Zufrieden mit uns?",
+  "sub": "Timmi freut sich über deine Bewertung"
+ }
+]

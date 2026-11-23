@@ -1,3 +1,4 @@
+import math
 """Rendert den TV-Clip (1080x1920, Hochformat, ohne Ton) aus einer Szenen-JSON.
 Ruckelfrei: Die Katze wird in Endgröße einmal skaliert und danach nur pixelgenau gesetzt.
 Bewegung entsteht durch Deko (weich gezeichnet), Text-Einblendungen und Schiebe-Übergänge.
@@ -256,7 +257,22 @@ def chrome(img, qr_alpha=1.0):
     d.text((x, H - FOOT + 212), HOURS, font=font("Bold", 34), fill=AMBER)
 
 
-def main(spec, out):
+def snow_layer(T, total, alpha):
+    """Schneefall, der sich nach `total` Sekunden nahtlos wiederholt."""
+    import random as _r
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    rnd = _r.Random(11)
+    for k in range(110):
+        x0 = rnd.uniform(0, W); y0 = rnd.uniform(0, H); r = rnd.uniform(3, 9)
+        m = rnd.choice((1, 2, 2, 3))
+        y = (y0 + T * m * H / total) % (H + 20) - 10
+        x = x0 + 22 * math.sin(2 * math.pi * (T / total) * rnd.choice((2, 3, 4)) + k)
+        d.ellipse((x - r, y - r, x + r, y + r), fill=(255, 255, 255, round(200 * alpha)))
+    return lay
+
+
+def main(spec, out, snow=False):
     scenes = [Scene(s) for s in json.load(open(spec, encoding="utf-8"))]
     n_sc = len(scenes)
     starts = [0.0]
@@ -285,6 +301,8 @@ def main(spec, out):
             canvas.alpha_composite(nxt, (W - x, 0))
             cur = canvas
             qa = qa * (1 - p) + small_qr(i + 1) * p
+        if snow and qa > 0.01:
+            cur.alpha_composite(snow_layer(T, total, qa))
         chrome(cur, qa)
         ff.stdin.write(cur.convert("RGB").tobytes())
     ff.stdin.close()
@@ -293,4 +311,4 @@ def main(spec, out):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], snow="--snow" in sys.argv)
