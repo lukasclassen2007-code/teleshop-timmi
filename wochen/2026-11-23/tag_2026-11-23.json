@@ -3,43 +3,52 @@
     "kicker": "MONTAG · 23.11.",
     "titel": ["Timmis", "Themen", "für heute"],
     "punkte": [
-      ["Black Friday kommt", "Fake-Shops erkennen"],
-      ["Fun-Fact", "Der erste Online-Kauf"],
-      ["Timmis Tipp", "Sicher bezahlen"]
+      ["5 Anbieter, 1 Shop", "Wir vergleichen für dich"],
+      ["Unser Service", "Beratung, Einrichtung & Check"],
+      ["Fun-Fact", "Mehr SIM-Karten als Menschen?"],
+      ["Timmis Tipp", "Vertragsende im Blick"]
     ]
   },
-  "fake": {
-    "kicker": "BLACK FRIDAY · 27.11.",
-    "headline": "Fake-Shop oder echt?",
-    "bg": [[255, 236, 236], [240, 130, 130]],
-    "col": [200, 40, 50],
-    "sub": "Diese Warnzeichen solltest du kennen:",
+  "anbieter": {
+    "kicker": "TELESHOP TIMMENDORFER STRAND",
+    "headline": "5 Anbieter, 1 Shop",
+    "sub": "Bei uns findest du alle unter einem Dach:",
+    "marken": ["Vodafone", "Telekom", "o2", "congstar", "otelo"],
+    "text": "Wir vergleichen für dich und finden gemeinsam den Tarif, der wirklich zu dir passt – für Mobilfunk, Internet und TV.",
+    "cta": "Komm vorbei – Poststraße 34!"
+  },
+  "service": {
+    "kicker": "UNSER SERVICE",
+    "headline": "Wobei hilft dir Timmi?",
+    "bg": [[232, 238, 255], [140, 160, 235]],
+    "col": [70, 90, 200],
+    "sub": "Persönlich vor Ort – ganz ohne Warteschleife:",
     "faelle": [
-      ["Zu billig?", "Riesige Rabatte auf Topmarken sind oft eine Falle."],
-      ["Kein Impressum", "Fehlt die Adresse vom Anbieter, lieber Finger weg."],
-      ["Nur Vorkasse", "Am Ende kein anderer Weg als Überweisung? Vorsicht!"]
+      ["Beratung", "Mobilfunk, Internet und TV – passend zu dir."],
+      ["Einrichtung", "Daten aufs neue Handy übertragen, eSIM einrichten."],
+      ["Haushalts-Check", "Strom, Gas, Internet, Mobilfunk – wir schauen, wo du sparst."]
     ],
     "schritte": [],
     "x1": 700,
-    "pose": "06_detektiv",
+    "pose": "04_zeigen",
     "cat_w": 360,
-    "cta": "Unsicher? Frag Timmi im Shop!"
+    "cta": "Weitere Infos bei uns im Shop!"
   },
   "funfact": {
-    "big": "1994",
-    "text": "gilt als Jahr des ersten dokumentierten Online-Kaufs mit verschlüsselter Bezahlung: eine Musik-CD von Sting!"
+    "big": "106 Millionen",
+    "text": "aktive SIM-Karten gab es Ende 2025 in Deutschland – rund 1,3 pro Einwohner. Viele nutzen eben Handy, Tablet & Co. gleichzeitig!"
   },
   "tipp": {
-    "pose": "05_warnung",
+    "pose": "06_detektiv",
     "kicker": "TIMMIS TIPP",
-    "bg": [[232, 248, 238], [120, 205, 160]],
-    "headline": "Sicher bezahlen!",
-    "sub": "So kaufst du am Black Friday entspannt online ein:",
+    "bg": [[255, 244, 226], [255, 200, 130]],
+    "headline": "Vertragsende im Blick!",
+    "sub": "Nach der Mindestlaufzeit ist dein Handyvertrag monatlich kündbar. Gut zu wissen:",
     "punkte": [
-      "Bezahlart mit Käuferschutz wählen",
-      "Nie per Überweisung an unbekannte Shops",
-      "Bewertungen auch auf anderen Seiten prüfen"
+      "Ende der Laufzeit im Vertrag nachschauen",
+      "Vergleichen, ob es etwas Passenderes gibt",
+      "Vertrag mitbringen – wir schauen gemeinsam drauf"
     ],
-    "cta": "Lieber persönlich? Komm vorbei!"
+    "cta": "Weitere Infos bei uns im Shop!"
   }
 }

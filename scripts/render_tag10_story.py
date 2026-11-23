@@ -1,4 +1,4 @@
-"""Story-Reihe 23.11. (3 × 7 s): Fake-Shop erkennen, erster Online-Kauf 1994, sicher bezahlen."""
+"""Story-Reihe 23.11. (3 × 7 s): 5 Anbieter 1 Shop, Service, SIM-Karten-Fun-Fact."""
 import math, sys
 from PIL import Image, ImageDraw
 import render_story_anim as rs
@@ -6,120 +6,120 @@ from render_story_anim import ease, back, layer, pill, head, star, W, H
 from timmi_lib import font, fit, gradient, glow, cat, INK, AMBER, WHITE
 from render_tag_story import cta_bottom
 
-RED, GREEN = (210, 45, 50), (40, 160, 80)
+MARKEN = ["Vodafone", "Telekom", "o2", "congstar", "otelo"]
+
+
+def shopfront(d, cx, y0, w, h):
+    x0 = cx - w / 2
+    d.rectangle((x0, y0 + 90, x0 + w, y0 + h), fill=(245, 240, 232), outline=INK, width=6)
+    n = 8
+    for k in range(n):
+        d.polygon([(x0 + k * w / n, y0), (x0 + (k + 1) * w / n, y0), (x0 + (k + 1) * w / n, y0 + 90), (x0 + (k + 0.5) * w / n, y0 + 120), (x0 + k * w / n, y0 + 90)], fill=AMBER if k % 2 == 0 else INK)
+    d.rounded_rectangle((cx - 210, y0 + 140, cx + 210, y0 + 210), radius=16, fill=INK)
+    d.text((cx, y0 + 175), "TELESHOP", font=font("Bold", 46), fill=WHITE, anchor="mm")
+    d.rectangle((cx - 80, y0 + h - 230, cx + 80, y0 + h), fill=(120, 170, 210), outline=INK, width=6)
+    for s in (-1, 1):
+        d.rectangle((cx + s * 120 - (90 if s > 0 else -90) * 0 - (0 if s > 0 else 180), y0 + 250, cx + s * 120 + (180 if s > 0 else 0), y0 + 400), fill=(170, 210, 235), outline=INK, width=5)
 
 
 def story1():
-    bg = gradient(W, H, (255, 236, 236), (235, 120, 120)).convert("RGBA")
-    c = cat("06_detektiv", 280, 280)
-    flags = [("Zu billig?", 960), ("Kein Impressum", 1045), ("Nur Vorkasse", 1130)]
+    bg = gradient(W, H, (40, 36, 52), (12, 12, 14)).convert("RGBA")
+    c = cat("01_winken", 260, 260)
 
     def frame(t):
         img = bg.copy()
-        glow(img, W // 2, 850, 430, (255, 255, 255), 0.55)
+        glow(img, W // 2, 900, 460, AMBER, 0.5)
         head(img, "STORY 1 / 3")
         a = ease((t - 0.2) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 425), "Fake-Shop?", font=font("Bold", 110), fill=INK, anchor="mt"))
-        # Browserfenster
-        q = back((t - 0.5) / 0.6) if t > 0.5 else 0
-        if q > 0:
-            lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-            d = ImageDraw.Draw(lay)
-            bw, bh = 820 * q, 360 * q
-            x0, y0 = W / 2 - bw / 2, 560
-            d.rounded_rectangle((x0, y0, x0 + bw, y0 + bh), radius=26, fill=WHITE, outline=INK, width=6)
-            if q > 0.95:
-                d.rounded_rectangle((x0, y0, x0 + bw, y0 + 60), radius=26, fill=(225, 225, 232))
-                d.rectangle((x0, y0 + 36, x0 + bw, y0 + 60), fill=(225, 225, 232))
-                for k, col in enumerate(((240, 90, 90), (250, 200, 70), (90, 200, 110))):
-                    d.ellipse((x0 + 24 + k * 34, y0 + 20, x0 + 46 + k * 34, y0 + 42), fill=col)
-                pulse = 1 + 0.06 * math.sin(t * 8)
-                d.rounded_rectangle((x0 + 60, y0 + 100, x0 + bw - 60, y0 + 260), radius=20, fill=RED)
-                d.text((W / 2, y0 + 180), "SALE -90 %", font=font("Bold", round(84 * pulse)), fill=WHITE, anchor="mm")
-                for k in range(3):
-                    d.rounded_rectangle((x0 + 60 + k * 240, y0 + 280, x0 + 260 + k * 240, y0 + 330), radius=16, fill=(240, 240, 245))
-            img.alpha_composite(lay)
-        # Warnzeichen
-        for i, (txt, y) in enumerate(flags):
-            a = ease((t - 1.8 - i * 0.5) / 0.35)
-            def fl(dd, txt=txt, y=y):
-                f = font("Bold", 40)
-                tw = dd.textlength("! " + txt, font=f)
-                bx0 = W / 2 - (tw + 40) / 2
-                dd.rounded_rectangle((bx0, y, bx0 + tw + 40, y + 70), radius=35, fill=INK)
-                dd.text((bx0 + 20, y + 35), "! " + txt, font=f, fill=AMBER, anchor="lm")
-            layer(img, a, fl)
-        a = ease((t - 3.4) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 1235), "Lieber zweimal hinschauen!", font=fit(dd, "Lieber zweimal hinschauen!", "Bold", 60, W - 90, 34), fill=INK, anchor="mt"))
-        rs.put_cat(img, c, W // 2, 1640, 3.0, t, "pop")
-        cta_bottom(img, t, "Unsicher? Frag Timmi im Shop!", t0=3.8, fill=INK, col=AMBER)
+        layer(img, a, lambda dd: dd.text((W / 2, 430), "5 Anbieter,", font=font("Bold", 96), fill=WHITE, anchor="mt"))
+        layer(img, ease((t - 0.6) / 0.5), lambda dd: dd.text((W / 2, 540), "1 Shop!", font=font("Bold", 110), fill=AMBER, anchor="mt"))
+        lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        q = back((t - 0.8) / 0.6) if t > 0.8 else 0
+        if q > 0.05:
+            shopfront(d, W / 2, 700 + (1 - q) * 300, 700, 520)
+        img.alpha_composite(lay)
+        for i, m in enumerate(MARKEN):
+            t0 = 1.6 + i * 0.35
+            p = ease((t - t0) / 0.6)
+            if t > t0:
+                row = i % 3
+                x = (W / 2 - 320 + (i * 160)) if True else 0
+                y = 1260 + (i % 2) * 80
+                sx = W / 2 + (-1 if i % 2 else 1) * 600 * (1 - p)
+                tx = W / 2 + (i - 2) * 195
+                layer(img, min(1, p * 1.5), lambda dd, m=m, x=sx + (tx - W / 2) * p, y=y: pill(dd, x, y, m, 36, fill=WHITE, col=INK))
+        rs.put_cat(img, c, W // 2, 1660, 3.6, t, "pop")
+        cta_bottom(img, t, "Komm vorbei – Poststraße 34!", t0=3.8)
         return img
     return frame
 
 
+ICONS = [("Beratung", "Mobilfunk, Internet & TV"), ("Einrichtung", "Daten übertragen, eSIM"), ("Haushalts-Check", "Strom, Gas, Internet, Mobilfunk")]
+
+
 def story2():
+    bg = gradient(W, H, (232, 238, 255), (130, 150, 230)).convert("RGBA")
+    c = cat("04_zeigen", 330, 360)
+
+    def frame(t):
+        img = bg.copy()
+        glow(img, W // 2, 850, 430, (255, 255, 255), 0.6)
+        head(img, "STORY 2 / 3")
+        a = ease((t - 0.2) / 0.5)
+        layer(img, a, lambda dd: dd.text((W / 2, 425), "Wobei hilft dir Timmi?", font=fit(dd, "Wobei hilft dir Timmi?", "Bold", 84, W - 80, 40), fill=INK, anchor="mt"))
+        for i, (tt, sub) in enumerate(ICONS):
+            a = ease((t - 0.8 - i * 0.6) / 0.45)
+            y = 590 + i * 200
+            def card(dd, tt=tt, sub=sub, y=y, i=i):
+                dd.rounded_rectangle((90, y, W - 90, y + 170), radius=34, fill=WHITE)
+                dd.ellipse((120, y + 35, 220, y + 135), fill=(70, 90, 200))
+                dd.text((170, y + 85), str(i + 1), font=font("Bold", 56), fill=WHITE, anchor="mm")
+                dd.text((260, y + 40), tt, font=font("Bold", 52), fill=INK)
+                dd.text((260, y + 108), sub, font=fit(dd, sub, "Medium", 34, W - 90 - 280, 24), fill=(70, 70, 80))
+            layer(img, a, card)
+        rs.put_cat(img, c, W // 2, 1650, 3.0, t, "pop")
+        cta_bottom(img, t, "Weitere Infos bei uns im Shop!", t0=3.6, fill=INK, col=AMBER)
+        return img
+    return frame
+
+
+def simcard(d, cx, cy, s):
+    w, h = s, s * 0.68
+    x0, y0 = cx - w / 2, cy - h / 2
+    d.polygon([(x0, y0), (x0 + w - h * 0.25, y0), (x0 + w, y0 + h * 0.25), (x0 + w, y0 + h), (x0, y0 + h)], fill=WHITE, outline=INK)
+    d.rounded_rectangle((cx - w * 0.22, cy - h * 0.25, cx + w * 0.22, cy + h * 0.25), radius=12, fill=(235, 190, 80), outline=(170, 120, 30), width=4)
+    d.line([(cx, cy - h * 0.25), (cx, cy + h * 0.25)], fill=(170, 120, 30), width=4)
+    d.line([(cx - w * 0.22, cy), (cx + w * 0.22, cy)], fill=(170, 120, 30), width=4)
+
+
+def story3():
     bg = gradient(W, H, (30, 26, 44), (10, 10, 14)).convert("RGBA")
-    c = cat("03_idee", 260, 260)
+    c = cat("02_handy", 300, 320)
 
     def frame(t):
         img = bg.copy()
         glow(img, W // 2, 800, 440, AMBER, 0.5)
-        head(img, "STORY 2 / 3")
-        a = ease((t - 0.2) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 430), "Der erste Online-Kauf", font=fit(dd, "Der erste Online-Kauf", "Bold", 80, W - 80, 40), fill=WHITE, anchor="mt"))
-        # CD dreht sich
-        if t > 0.6:
-            q = back((t - 0.6) / 0.6)
-            r = 230 * q
-            cx, cy = W / 2, 800
-            lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-            d = ImageDraw.Draw(lay)
-            d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(215, 220, 230), outline=(150, 155, 170), width=6)
-            for k in range(6):
-                ang = t * 4 + k * 1.047
-                d.pieslice((cx - r * 0.95, cy - r * 0.95, cx + r * 0.95, cy + r * 0.95), math.degrees(ang), math.degrees(ang) + 22, fill=(170 + 14 * k, 200, 255 - 12 * k))
-            d.ellipse((cx - r * 0.3, cy - r * 0.3, cx + r * 0.3, cy + r * 0.3), fill=(235, 238, 245))
-            d.ellipse((cx - r * 0.12, cy - r * 0.12, cx + r * 0.12, cy + r * 0.12), fill=(30, 26, 44))
-            img.alpha_composite(lay)
-        p = ease((t - 1.6) / 1.0)
-        if t > 1.6:
-            yr = round(2026 - 32 * p)
-            ImageDraw.Draw(img).text((W / 2, 1070), str(yr), font=font("Bold", 190), fill=AMBER, anchor="mt", stroke_width=6, stroke_fill=INK)
-        a = ease((t - 2.8) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 1290), "Eine Musik-CD – sicher per Internet bezahlt!", font=fit(dd, "Eine Musik-CD – sicher per Internet bezahlt!", "Bold", 48, W - 90, 28), fill=WHITE, anchor="mt"))
-        rs.put_cat(img, c, 900, 1680, 3.4, t, "pop")
-        cta_bottom(img, t, "Besuch Timmi im Shop!", t0=3.8)
-        return img
-    return frame
-
-
-def shield(d, cx, cy, s, col):
-    pts = [(cx, cy - s), (cx + s * 0.8, cy - s * 0.65), (cx + s * 0.7, cy + s * 0.3), (cx, cy + s), (cx - s * 0.7, cy + s * 0.3), (cx - s * 0.8, cy - s * 0.65)]
-    d.polygon(pts, fill=col, outline=INK)
-    d.line([(cx - s * 0.35, cy), (cx - s * 0.08, cy + s * 0.3), (cx + s * 0.4, cy - s * 0.3)], fill=WHITE, width=max(8, int(s * 0.13)), joint="curve")
-
-
-def story3():
-    bg = gradient(W, H, (232, 248, 238), (110, 200, 150)).convert("RGBA")
-    c = cat("04_zeigen", 330, 340)
-    tips = ["Käuferschutz nutzen", "Keine Überweisung an Unbekannte", "Bewertungen woanders prüfen"]
-
-    def frame(t):
-        img = bg.copy()
-        glow(img, W // 2, 760, 420, (255, 255, 255), 0.6)
         head(img, "STORY 3 / 3")
         a = ease((t - 0.2) / 0.5)
-        layer(img, a, lambda dd: dd.text((W / 2, 425), "Sicher bezahlen!", font=fit(dd, "Sicher bezahlen!", "Bold", 100, W - 80, 50), fill=INK, anchor="mt"))
-        if t > 0.6:
-            q = back((t - 0.6) / 0.6)
-            lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-            shield(ImageDraw.Draw(lay), W / 2, 720, 150 * q * (1 + 0.04 * math.sin(t * 5)), GREEN)
-            img.alpha_composite(lay)
-        for i, tp in enumerate(tips):
-            a = ease((t - 1.6 - i * 0.45) / 0.4)
-            layer(img, a, lambda dd, tp=tp, i=i: pill(dd, W / 2, 930 + i * 95, "✓ " + tp if False else tp, 40, fill=WHITE, col=INK))
-        rs.put_cat(img, c, W // 2, 1640, 3.2, t, "pop")
-        cta_bottom(img, t, "Lieber persönlich? Komm vorbei!", t0=3.8, fill=INK, col=AMBER)
+        layer(img, a, lambda dd: dd.text((W / 2, 430), "Wusstest du?", font=font("Bold", 80), fill=WHITE, anchor="mt"))
+        lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        for k in range(3):
+            q = back((t - 0.5 - k * 0.2) / 0.5) if t > 0.5 + k * 0.2 else 0
+            if q > 0.05:
+                simcard(d, W / 2 + (k - 1) * 150 + math.sin(t * 2 + k) * 6, 700 + abs(k - 1) * 40, 300 * q)
+        img.alpha_composite(lay)
+        p = ease((t - 1.4) / 1.6)
+        n = round(106 * p) if t > 1.4 else 0
+        ImageDraw.Draw(img).text((W / 2, 900), f"{n} Mio.", font=font("Bold", 170), fill=AMBER, anchor="mt", stroke_width=6, stroke_fill=INK)
+        a = ease((t - 2.8) / 0.5)
+        layer(img, a, lambda dd: dd.text((W / 2, 1110), "aktive SIM-Karten in Deutschland", font=fit(dd, "aktive SIM-Karten in Deutschland", "Bold", 54, W - 90, 30), fill=WHITE, anchor="mt"))
+        a = ease((t - 3.3) / 0.5)
+        layer(img, a, lambda dd: pill(dd, W / 2, 1220, "rund 1,3 pro Einwohner!", 44, fill=AMBER, col=INK))
+        rs.put_cat(img, c, W // 2, 1650, 3.6, t, "pop")
+        cta_bottom(img, t, "Besuch Timmi im Shop!", t0=4.0)
+        ImageDraw.Draw(img).text((W - 70, 1800), "Quelle: Bundesnetzagentur, Ende 2025", font=font("Regular", 22), fill=(150, 150, 160), anchor="ra")
         return img
     return frame
 
@@ -127,6 +127,6 @@ def story3():
 if __name__ == "__main__":
     rs.OUT = sys.argv[1]
     todo = sys.argv[2:] or ["1", "2", "3"]
-    if "1" in todo: rs.write("story_1_fake_shop", story1())
-    if "2" in todo: rs.write("story_2_erster_kauf", story2())
-    if "3" in todo: rs.write("story_3_sicher_bezahlen", story3())
+    if "1" in todo: rs.write("story_1_anbieter", story1())
+    if "2" in todo: rs.write("story_2_service", story2())
+    if "3" in todo: rs.write("story_3_sim_karten", story3())
