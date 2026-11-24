@@ -1,0 +1,93 @@
+{
+  "cover": {
+    "kicker": "DIENSTAG · 24.11.",
+    "titel": [
+      "Timmis",
+      "Themen",
+      "für heute"
+    ],
+    "punkte": [
+      [
+        "Eure Fragen",
+        "Timmi antwortet"
+      ],
+      [
+        "Fun-Fact",
+        "Seit wann gehört dir deine Nummer?"
+      ],
+      [
+        "Timmis Tipp",
+        "Das bringst du mit"
+      ]
+    ]
+  },
+  "faq": {
+    "kicker": "FRAG TIMMI",
+    "headline": "Das fragt ihr uns oft:",
+    "bg": [
+      [
+        232,
+        238,
+        255
+      ],
+      [
+        140,
+        160,
+        235
+      ]
+    ],
+    "col": [
+      70,
+      90,
+      200
+    ],
+    "sub": "Timmis Antworten auf die häufigsten Fragen im Shop:",
+    "faelle": [
+      [
+        "Nummer mitnehmen?",
+        "Ja! Deine Nummer kommt mit zum neuen Anbieter – wir kümmern uns darum."
+      ],
+      [
+        "Daten aufs neue Handy?",
+        "Fotos, Kontakte, Chats: Wir helfen dir beim Übertragen."
+      ],
+      [
+        "Vertrag verlängern?",
+        "Bring deinen Vertrag mit – wir schauen gemeinsam, was zu dir passt."
+      ]
+    ],
+    "schritte": [],
+    "cta": "Noch Fragen? Komm vorbei!",
+    "pose": "03_idee",
+    "cat_w": 300,
+    "cat_h": 240
+  },
+  "funfact": {
+    "big": "Seit 2002",
+    "text": "kannst du in Deutschland deine Handynummer zum neuen Anbieter mitnehmen – und seit Dezember 2021 ist das sogar kostenlos."
+  },
+  "tipp": {
+    "pose": "04_zeigen",
+    "kicker": "TIMMIS TIPP",
+    "bg": [
+      [
+        255,
+        244,
+        226
+      ],
+      [
+        255,
+        200,
+        130
+      ]
+    ],
+    "headline": "Das bringst du mit!",
+    "sub": "Für einen neuen Vertrag oder Handywechsel geht's damit am schnellsten:",
+    "punkte": [
+      "Personalausweis oder Reisepass",
+      "Bankkarte bzw. IBAN für den Vertrag",
+      "Altes Handy samt Codes und Passwörtern"
+    ],
+    "cta": "Weitere Infos bei uns im Shop!"
+  }
+}
