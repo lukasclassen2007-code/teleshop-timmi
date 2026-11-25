@@ -1,0 +1,106 @@
+{
+  "cover": {
+    "kicker": "MITTWOCH · 25.11.",
+    "titel": [
+      "Timmis",
+      "Themen",
+      "für heute"
+    ],
+    "punkte": [
+      [
+        "Weihnachtsstimmung",
+        "Draußen Schnee, drinnen Lichterkette"
+      ],
+      [
+        "Weihnachtsberatung",
+        "Geschenke rund ums Handy"
+      ],
+      [
+        "Fun-Fact",
+        "Die erste Lichterkette"
+      ],
+      [
+        "Timmis Tipp",
+        "Lichter & Schnee fotografieren"
+      ]
+    ]
+  },
+  "stimmung": {
+    "kicker": "WEIHNACHTEN IM SHOP",
+    "headline": [
+      "Draußen Schnee,",
+      "drinnen Lichterkette!"
+    ],
+    "text": "Bei uns hängt die Lichterkette und der Tannenbaum steht. Komm rein, wärm dich auf und lass dich beraten!",
+    "cta": "Komm vorbei – Poststraße 34!"
+  },
+  "beratung": {
+    "kicker": "WEIHNACHTSBERATUNG",
+    "headline": "Geschenk-Zeit bei Timmi",
+    "bg": [
+      [
+        255,
+        236,
+        236
+      ],
+      [
+        232,
+        120,
+        120
+      ]
+    ],
+    "col": [
+      200,
+      40,
+      50
+    ],
+    "sub": "So machen wir dir das Schenken leicht:",
+    "faelle": [
+      [
+        "Beratung",
+        "Wir helfen beim Aussuchen – für Groß und Klein."
+      ],
+      [
+        "Startklar",
+        "Auspacken und loslegen – wir richten's vorher ein."
+      ],
+      [
+        "Tarif dazu",
+        "Der passende Tarif fürs neue Handy."
+      ]
+    ],
+    "schritte": [],
+    "x1": 700,
+    "pose": "16_geschenk",
+    "cat_w": 360,
+    "cta": "Weitere Infos bei uns im Shop!"
+  },
+  "funfact": {
+    "big": "1882",
+    "text": "leuchtete der erste Weihnachtsbaum mit elektrischen Lämpchen – vorher brannten echte Kerzen am Baum!"
+  },
+  "tipp": {
+    "pose": "09_empfang",
+    "kicker": "TIMMIS TIPP",
+    "bg": [
+      [
+        234,
+        247,
+        255
+      ],
+      [
+        160,
+        212,
+        245
+      ]
+    ],
+    "headline": "Lichter & Schnee fotografieren",
+    "sub": "So werden deine Winterfotos mit dem Handy richtig stimmungsvoll:",
+    "punkte": [
+      "Blitz aus – sonst ist die Stimmung weg",
+      "Nachtmodus nutzen und das Handy ruhig halten",
+      "Bei Schnee die Belichtung etwas heller stellen"
+    ],
+    "cta": "Weitere Infos bei uns im Shop!"
+  }
+}
